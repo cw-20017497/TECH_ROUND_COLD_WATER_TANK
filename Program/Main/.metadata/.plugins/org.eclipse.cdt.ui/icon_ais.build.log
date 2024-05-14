@@ -1,6 +1,6 @@
-09:24:58 **** Incremental Build of configuration HardwareDebug for project icon_ais ****
+15:48:31 **** Incremental Build of configuration HardwareDebug for project icon_ais ****
 make -k -j12 all 
 Build complete.
 
-09:24:59 Build Finished. 0 errors, 0 warnings. (took 929ms)
+15:48:32 Build Finished. 0 errors, 0 warnings. (took 1s.135ms)
 

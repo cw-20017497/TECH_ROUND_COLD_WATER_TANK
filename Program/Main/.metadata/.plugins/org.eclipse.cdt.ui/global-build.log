@@ -8431,3 +8431,7 @@ Extracting support files...
 09:24:58 **** Incremental Build of configuration HardwareDebug for project icon_ais ****
 make -k -j12 all 
 Build complete.
+Extracting support files...
+15:48:31 **** Incremental Build of configuration HardwareDebug for project icon_ais ****
+make -k -j12 all 
+Build complete.
