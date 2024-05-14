@@ -1,0 +1,1960 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MicomToolCommonProjectFile Version="1.00">
+  <CreatorType Name="e2studio" Version=""/>
+  <Placeholders>
+    <PlaceholderPrefix>${</PlaceholderPrefix>
+    <PlaceholderPostfix>}</PlaceholderPostfix>
+  </Placeholders>
+  <Project Name="icon_ais" Type="Application">
+    <Files>
+      <Category Name=".metadata">
+        <Category Name=".plugins">
+          <Category Name="org.eclipse.cdt.make.core">
+            <Path>.metadata\.plugins\org.eclipse.cdt.make.core\specs.c</Path>
+            <Path>.metadata\.plugins\org.eclipse.cdt.make.core\specs.cpp</Path>
+          </Category>
+          <Category Name="org.eclipse.jdt.core">
+            <Path>.metadata\.plugins\org.eclipse.jdt.core\javaLikeNames.txt</Path>
+          </Category>
+        </Category>
+      </Category>
+      <Category Name="src">
+        <Path>src\icon_ais.c</Path>
+        <Category Name="prj">
+          <Path>src\prj\config.h</Path>
+          <Path>src\prj\main.c</Path>
+          <Path>src\prj\prj_type.h</Path>
+          <Path>src\prj\process_sys_event.c</Path>
+          <Path>src\prj\process_sys_event.h</Path>
+          <Path>src\prj\util.c</Path>
+          <Path>src\prj\util.h</Path>
+          <Category Name="Wifi">
+            <Category Name="WifiEtc">
+              <Path>src\prj\Wifi\WifiEtc\WIFI_DataCheck.c</Path>
+              <Path>src\prj\Wifi\WifiEtc\WIFI_DataCheck.h</Path>
+              <Path>src\prj\Wifi\WifiEtc\WIFI_Initialize.c</Path>
+              <Path>src\prj\Wifi\WifiEtc\WIFI_Initialize.h</Path>
+              <Path>src\prj\Wifi\WifiEtc\WIFI_ProcessApmode.c</Path>
+              <Path>src\prj\Wifi\WifiEtc\WIFI_ProcessApmode.h</Path>
+              <Path>src\prj\Wifi\WifiEtc\WIFI_Status.c</Path>
+              <Path>src\prj\Wifi\WifiEtc\WIFI_Status.h</Path>
+              <Path>src\prj\Wifi\WifiEtc\WIFI_UartInterrupt.c</Path>
+              <Path>src\prj\Wifi\WifiEtc\WIFI_UartInterrupt.h</Path>
+            </Category>
+            <Category Name="WifiRx">
+              <Path>src\prj\Wifi\WifiRx\WIFI_Fota.c</Path>
+              <Path>src\prj\Wifi\WifiRx\WIFI_Fota.h</Path>
+              <Path>src\prj\Wifi\WifiRx\WIFI_RxProcess.c</Path>
+              <Path>src\prj\Wifi\WifiRx\WIFI_RxProcess.h</Path>
+              <Path>src\prj\Wifi\WifiRx\WIFI_RxServer.c</Path>
+              <Path>src\prj\Wifi\WifiRx\WIFI_RxServer.h</Path>
+            </Category>
+            <Category Name="WifiSetting">
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetAccumulateData.c</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetAccumulateData.h</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetCommon.c</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetCommon.h</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetErrorData.c</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetErrorData.h</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetFunctionData.c</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetFunctionData.h</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetInformationData.c</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetInformationData.h</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetMonitorData.c</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetMonitorData.h</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetPartData.c</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetPartData.h</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetSensorData.c</Path>
+              <Path>src\prj\Wifi\WifiSetting\WIFI_SetSensorData.h</Path>
+            </Category>
+            <Category Name="WifiTx">
+              <Path>src\prj\Wifi\WifiTx\WIFI_TxForm.c</Path>
+              <Path>src\prj\Wifi\WifiTx\WIFI_TxForm.h</Path>
+              <Path>src\prj\Wifi\WifiTx\WIFI_TxMake.c</Path>
+              <Path>src\prj\Wifi\WifiTx\WIFI_TxMake.h</Path>
+              <Path>src\prj\Wifi\WifiTx\WIFI_TxProtocol.c</Path>
+              <Path>src\prj\Wifi\WifiTx\WIFI_TxProtocol.h</Path>
+            </Category>
+            <Category Name="WifiUser">
+              <Path>src\prj\Wifi\WifiUser\WIFI_Common.c</Path>
+              <Path>src\prj\Wifi\WifiUser\WIFI_Common.h</Path>
+              <Path>src\prj\Wifi\WifiUser\WIFI_Control.c</Path>
+              <Path>src\prj\Wifi\WifiUser\WIFI_Control.h</Path>
+              <Path>src\prj\Wifi\WifiUser\WIFI_DefUser.h</Path>
+              <Path>src\prj\Wifi\WifiUser\WIFI_UserInterface.c</Path>
+              <Path>src\prj\Wifi\WifiUser\WIFI_UserInterface.h</Path>
+              <Category Name="AIS4.0">
+                <Path>src\prj\Wifi\WifiUser\AIS4.0\WIFI_MonitorFixRAM.c</Path>
+                <Path>src\prj\Wifi\WifiUser\AIS4.0\WIFI_MonitorFixRAM.h</Path>
+                <Path>src\prj\Wifi\WifiUser\AIS4.0\WIFI_UserCommon_IconAIS.h</Path>
+                <Path>src\prj\Wifi\WifiUser\AIS4.0\WIFI_UserInterface_IconAIS.c</Path>
+                <Path>src\prj\Wifi\WifiUser\AIS4.0\WIFI_UserInterface_IconAIS.h</Path>
+              </Category>
+            </Category>
+          </Category>
+          <Category Name="comm">
+            <Path>src\prj\comm\comm.c</Path>
+            <Path>src\prj\comm\comm.h</Path>
+            <Path>src\prj\comm\crc16.c</Path>
+            <Path>src\prj\comm\crc16.h</Path>
+            <Path>src\prj\comm\parser.c</Path>
+            <Path>src\prj\comm\parser.h</Path>
+            <Path>src\prj\comm\parser_comp.c</Path>
+            <Path>src\prj\comm\parser_comp.h</Path>
+            <Path>src\prj\comm\parser_debug.c</Path>
+            <Path>src\prj\comm\parser_debug.h</Path>
+            <Path>src\prj\comm\parser_eol.c</Path>
+            <Path>src\prj\comm\parser_eol.h</Path>
+            <Path>src\prj\comm\parser_front.c</Path>
+            <Path>src\prj\comm\parser_front.h</Path>
+          </Category>
+          <Category Name="diagnosis">
+            <Path>src\prj\diagnosis\diagnosis.c</Path>
+            <Path>src\prj\diagnosis\diagnosis.h</Path>
+            <Path>src\prj\diagnosis\diagnosis_12v.c</Path>
+            <Path>src\prj\diagnosis\diagnosis_12v.h</Path>
+            <Path>src\prj\diagnosis\diagnosis_24v.c</Path>
+            <Path>src\prj\diagnosis\diagnosis_24v.h</Path>
+            <Path>src\prj\diagnosis\diagnosis_ac.c</Path>
+            <Path>src\prj\diagnosis\diagnosis_ac.h</Path>
+            <Path>src\prj\diagnosis\diagnosis_common.h</Path>
+            <Path>src\prj\diagnosis\diagnosis_feedback.c</Path>
+            <Path>src\prj\diagnosis\diagnosis_feedback.h</Path>
+            <Path>src\prj\diagnosis\diagnosis_sensor.c</Path>
+            <Path>src\prj\diagnosis\diagnosis_sensor.h</Path>
+            <Path>src\prj\diagnosis\monitoring.c</Path>
+            <Path>src\prj\diagnosis\monitoring.h</Path>
+          </Category>
+          <Category Name="display">
+            <Path>src\prj\display\display.c</Path>
+            <Path>src\prj\display\display.h</Path>
+            <Path>src\prj\display\display_clock.c</Path>
+            <Path>src\prj\display\display_clock.h</Path>
+            <Path>src\prj\display\display_eol.c</Path>
+            <Path>src\prj\display\display_eol.h</Path>
+            <Path>src\prj\display\display_error.c</Path>
+            <Path>src\prj\display\display_error.h</Path>
+            <Path>src\prj\display\display_lib.c</Path>
+            <Path>src\prj\display\display_lib.h</Path>
+            <Path>src\prj\display\front.c</Path>
+            <Path>src\prj\display\front.h</Path>
+            <Path>src\prj\display\process_display.c</Path>
+            <Path>src\prj\display\process_display.h</Path>
+          </Category>
+          <Category Name="drain">
+            <Path>src\prj\drain\drain.c</Path>
+            <Path>src\prj\drain\drain.h</Path>
+            <Path>src\prj\drain\empty_cold_tank.c</Path>
+            <Path>src\prj\drain\empty_cold_tank.h</Path>
+          </Category>
+          <Category Name="eeprom">
+            <Path>src\prj\eeprom\eeprom.c</Path>
+            <Path>src\prj\eeprom\eeprom.h</Path>
+            <Path>src\prj\eeprom\rtc.c</Path>
+            <Path>src\prj\eeprom\rtc.h</Path>
+          </Category>
+          <Category Name="eol">
+            <Path>src\prj\eol\eol.c</Path>
+            <Path>src\prj\eol\eol.h</Path>
+            <Path>src\prj\eol\eol_lever_handler.c</Path>
+            <Path>src\prj\eol\eol_lever_handler.h</Path>
+            <Path>src\prj\eol\key_eol_handler.c</Path>
+            <Path>src\prj\eol\key_eol_handler.h</Path>
+            <Path>src\prj\eol\process_eol.c</Path>
+            <Path>src\prj\eol\process_eol.h</Path>
+          </Category>
+          <Category Name="error">
+            <Path>src\prj\error\err_comp_bldc.c</Path>
+            <Path>src\prj\error\err_comp_bldc.h</Path>
+            <Path>src\prj\error\err_comp_bldc_comm.c</Path>
+            <Path>src\prj\error\err_comp_bldc_comm.h</Path>
+            <Path>src\prj\error\err_drain_pump.c</Path>
+            <Path>src\prj\error\err_drain_pump.h</Path>
+            <Path>src\prj\error\err_ice_tray.c</Path>
+            <Path>src\prj\error\err_ice_tray.h</Path>
+            <Path>src\prj\error\err_leak.c</Path>
+            <Path>src\prj\error\err_leak.h</Path>
+            <Path>src\prj\error\err_leak_flow.c</Path>
+            <Path>src\prj\error\err_leak_flow.h</Path>
+            <Path>src\prj\error\err_outage_hot_water.c</Path>
+            <Path>src\prj\error\err_outage_hot_water.h</Path>
+            <Path>src\prj\error\err_outage_ice_tray.c</Path>
+            <Path>src\prj\error\err_outage_ice_tray.h</Path>
+            <Path>src\prj\error\err_outage_water.c</Path>
+            <Path>src\prj\error\err_outage_water.h</Path>
+            <Path>src\prj\error\err_temp.c</Path>
+            <Path>src\prj\error\err_temp.h</Path>
+            <Path>src\prj\error\err_temp_ambient.c</Path>
+            <Path>src\prj\error\err_temp_ambient.h</Path>
+            <Path>src\prj\error\err_temp_cold_water.c</Path>
+            <Path>src\prj\error\err_temp_cold_water.h</Path>
+            <Path>src\prj\error\err_temp_eva_1.c</Path>
+            <Path>src\prj\error\err_temp_eva_1.h</Path>
+            <Path>src\prj\error\err_temp_heater.c</Path>
+            <Path>src\prj\error\err_temp_heater.h</Path>
+            <Path>src\prj\error\err_temp_hot_overheat.c</Path>
+            <Path>src\prj\error\err_temp_hot_overheat.h</Path>
+            <Path>src\prj\error\err_temp_hot_water.c</Path>
+            <Path>src\prj\error\err_temp_hot_water.h</Path>
+            <Path>src\prj\error\err_temp_hot_water_in.c</Path>
+            <Path>src\prj\error\err_temp_hot_water_in.h</Path>
+            <Path>src\prj\error\err_temp_room_water.c</Path>
+            <Path>src\prj\error\err_temp_room_water.h</Path>
+            <Path>src\prj\error\error.c</Path>
+            <Path>src\prj\error\error.h</Path>
+            <Path>src\prj\error\process_error.c</Path>
+            <Path>src\prj\error\process_error.h</Path>
+          </Category>
+          <Category Name="fct">
+            <Path>src\prj\fct\fct.c</Path>
+            <Path>src\prj\fct\fct.h</Path>
+            <Path>src\prj\fct\fct_lever_handler.c</Path>
+            <Path>src\prj\fct\fct_lever_handler.h</Path>
+            <Path>src\prj\fct\key_fct_handler.c</Path>
+            <Path>src\prj\fct\key_fct_handler.h</Path>
+            <Path>src\prj\fct\process_fct.c</Path>
+            <Path>src\prj\fct\process_fct.h</Path>
+          </Category>
+          <Category Name="filter">
+            <Path>src\prj\filter\filter.c</Path>
+            <Path>src\prj\filter\filter.h</Path>
+          </Category>
+          <Category Name="hal">
+            <Path>src\prj\hal\hal_adc.c</Path>
+            <Path>src\prj\hal\hal_adc.h</Path>
+            <Path>src\prj\hal\hal_eeprom.c</Path>
+            <Path>src\prj\hal\hal_eeprom.h</Path>
+            <Path>src\prj\hal\hal_fan_motor.c</Path>
+            <Path>src\prj\hal\hal_fan_motor.h</Path>
+            <Path>src\prj\hal\hal_i2c.c</Path>
+            <Path>src\prj\hal\hal_i2c.h</Path>
+            <Path>src\prj\hal\hal_input.c</Path>
+            <Path>src\prj\hal\hal_input.h</Path>
+            <Path>src\prj\hal\hal_key.c</Path>
+            <Path>src\prj\hal\hal_key.h</Path>
+            <Path>src\prj\hal\hal_led.c</Path>
+            <Path>src\prj\hal\hal_led.h</Path>
+            <Path>src\prj\hal\hal_level.c</Path>
+            <Path>src\prj\hal\hal_level.h</Path>
+            <Path>src\prj\hal\hal_pump.c</Path>
+            <Path>src\prj\hal\hal_pump.h</Path>
+            <Path>src\prj\hal\hal_relay.c</Path>
+            <Path>src\prj\hal\hal_relay.h</Path>
+            <Path>src\prj\hal\hal_serial.c</Path>
+            <Path>src\prj\hal\hal_serial.h</Path>
+            <Path>src\prj\hal\hal_step_motor.c</Path>
+            <Path>src\prj\hal\hal_step_motor.h</Path>
+            <Path>src\prj\hal\hal_uv.c</Path>
+            <Path>src\prj\hal\hal_uv.h</Path>
+            <Path>src\prj\hal\hal_valve.c</Path>
+            <Path>src\prj\hal\hal_valve.h</Path>
+            <Path>src\prj\hal\hw.h</Path>
+            <Path>src\prj\hal\mcu.h</Path>
+          </Category>
+          <Category Name="health">
+            <Path>src\prj\health\drain_water.c</Path>
+            <Path>src\prj\health\drain_water.h</Path>
+            <Path>src\prj\health\health.c</Path>
+            <Path>src\prj\health\health.h</Path>
+            <Path>src\prj\health\health_maker.c</Path>
+            <Path>src\prj\health\health_maker.h</Path>
+            <Path>src\prj\health\process_uv.c</Path>
+            <Path>src\prj\health\process_uv.h</Path>
+            <Path>src\prj\health\uv.c</Path>
+            <Path>src\prj\health\uv.h</Path>
+          </Category>
+          <Category Name="ice_maker">
+            <Path>src\prj\ice_maker\deicing_table.c</Path>
+            <Path>src\prj\ice_maker\deicing_table.h</Path>
+            <Path>src\prj\ice_maker\dummy_deicing_table.c</Path>
+            <Path>src\prj\ice_maker\dummy_deicing_table.h</Path>
+            <Path>src\prj\ice_maker\ice.c</Path>
+            <Path>src\prj\ice_maker\ice.h</Path>
+            <Path>src\prj\ice_maker\ice_maker.c</Path>
+            <Path>src\prj\ice_maker\ice_maker.h</Path>
+            <Path>src\prj\ice_maker\icing_table.c</Path>
+            <Path>src\prj\ice_maker\icing_table.h</Path>
+          </Category>
+          <Category Name="io">
+            <Path>src\prj\io\comp.c</Path>
+            <Path>src\prj\io\comp.h</Path>
+            <Path>src\prj\io\comp_bldc.c</Path>
+            <Path>src\prj\io\comp_bldc.h</Path>
+            <Path>src\prj\io\drain_pump.c</Path>
+            <Path>src\prj\io\drain_pump.h</Path>
+            <Path>src\prj\io\fan_motor.c</Path>
+            <Path>src\prj\io\fan_motor.h</Path>
+            <Path>src\prj\io\flow_meter.c</Path>
+            <Path>src\prj\io\flow_meter.h</Path>
+            <Path>src\prj\io\flow_valve.c</Path>
+            <Path>src\prj\io\flow_valve.h</Path>
+            <Path>src\prj\io\gas_switch_valve.c</Path>
+            <Path>src\prj\io\gas_switch_valve.h</Path>
+            <Path>src\prj\io\heater_out.c</Path>
+            <Path>src\prj\io\heater_out.h</Path>
+            <Path>src\prj\io\heater_table.c</Path>
+            <Path>src\prj\io\heater_table.h</Path>
+            <Path>src\prj\io\hot_water_flow.c</Path>
+            <Path>src\prj\io\hot_water_flow.h</Path>
+            <Path>src\prj\io\hot_water_heater.c</Path>
+            <Path>src\prj\io\hot_water_heater.h</Path>
+            <Path>src\prj\io\ice_door.c</Path>
+            <Path>src\prj\io\ice_door.h</Path>
+            <Path>src\prj\io\ice_full.c</Path>
+            <Path>src\prj\io\ice_full.h</Path>
+            <Path>src\prj\io\ice_tray.c</Path>
+            <Path>src\prj\io\ice_tray.h</Path>
+            <Path>src\prj\io\leak.c</Path>
+            <Path>src\prj\io\leak.h</Path>
+            <Path>src\prj\io\process_make.c</Path>
+            <Path>src\prj\io\process_make.h</Path>
+            <Path>src\prj\io\relay.c</Path>
+            <Path>src\prj\io\relay.h</Path>
+            <Path>src\prj\io\smps.c</Path>
+            <Path>src\prj\io\smps.h</Path>
+            <Path>src\prj\io\swing_bar.c</Path>
+            <Path>src\prj\io\swing_bar.h</Path>
+            <Path>src\prj\io\valve.c</Path>
+            <Path>src\prj\io\valve.h</Path>
+          </Category>
+          <Category Name="iocare">
+            <Path>src\prj\iocare\energy.c</Path>
+            <Path>src\prj\iocare\energy.h</Path>
+            <Path>src\prj\iocare\smart_check.c</Path>
+            <Path>src\prj\iocare\smart_check.h</Path>
+            <Path>src\prj\iocare\user.c</Path>
+            <Path>src\prj\iocare\user.h</Path>
+          </Category>
+          <Category Name="key">
+            <Path>src\prj\key\key.c</Path>
+            <Path>src\prj\key\key.h</Path>
+            <Path>src\prj\key\key_common_handler.h</Path>
+            <Path>src\prj\key\key_event_lib.c</Path>
+            <Path>src\prj\key\key_event_lib.h</Path>
+            <Path>src\prj\key\key_handler.c</Path>
+            <Path>src\prj\key\key_handler.h</Path>
+            <Path>src\prj\key\key_normal_handler.c</Path>
+            <Path>src\prj\key\key_normal_handler.h</Path>
+            <Path>src\prj\key\process_key.c</Path>
+            <Path>src\prj\key\process_key.h</Path>
+          </Category>
+          <Category Name="lever">
+            <Path>src\prj\lever\lever.c</Path>
+            <Path>src\prj\lever\lever.h</Path>
+            <Path>src\prj\lever\lever_common_handler.h</Path>
+            <Path>src\prj\lever\lever_handler.c</Path>
+            <Path>src\prj\lever\lever_handler.h</Path>
+            <Path>src\prj\lever\process_lever.c</Path>
+            <Path>src\prj\lever\process_lever.h</Path>
+          </Category>
+          <Category Name="metering">
+            <Path>src\prj\metering\metering.c</Path>
+            <Path>src\prj\metering\metering.h</Path>
+          </Category>
+          <Category Name="power_saving">
+            <Path>src\prj\power_saving\eco.c</Path>
+            <Path>src\prj\power_saving\eco.h</Path>
+            <Path>src\prj\power_saving\power_saving.c</Path>
+            <Path>src\prj\power_saving\power_saving.h</Path>
+          </Category>
+          <Category Name="sensor">
+            <Path>src\prj\sensor\level.c</Path>
+            <Path>src\prj\sensor\level.h</Path>
+            <Path>src\prj\sensor\temp.c</Path>
+            <Path>src\prj\sensor\temp.h</Path>
+            <Path>src\prj\sensor\temp_table_ambient.c</Path>
+            <Path>src\prj\sensor\temp_table_ambient.h</Path>
+            <Path>src\prj\sensor\temp_table_cold.c</Path>
+            <Path>src\prj\sensor\temp_table_cold.h</Path>
+            <Path>src\prj\sensor\temp_table_cold_lattron.c</Path>
+            <Path>src\prj\sensor\temp_table_cold_lattron.h</Path>
+            <Path>src\prj\sensor\temp_table_common.c</Path>
+            <Path>src\prj\sensor\temp_table_common.h</Path>
+            <Path>src\prj\sensor\temp_table_eva.c</Path>
+            <Path>src\prj\sensor\temp_table_eva.h</Path>
+            <Path>src\prj\sensor\temp_table_hot_in_out.c</Path>
+            <Path>src\prj\sensor\temp_table_hot_in_out.h</Path>
+            <Path>src\prj\sensor\temp_table_ice_tray_in.c</Path>
+            <Path>src\prj\sensor\temp_table_ice_tray_in.h</Path>
+            <Path>src\prj\sensor\temp_table_room.c</Path>
+            <Path>src\prj\sensor\temp_table_room.h</Path>
+          </Category>
+          <Category Name="service_check">
+            <Path>src\prj\service_check\cody_kit.c</Path>
+            <Path>src\prj\service_check\cody_kit.h</Path>
+            <Path>src\prj\service_check\ice_tray_test.c</Path>
+            <Path>src\prj\service_check\ice_tray_test.h</Path>
+            <Path>src\prj\service_check\service.c</Path>
+            <Path>src\prj\service_check\service.h</Path>
+          </Category>
+          <Category Name="sound">
+            <Path>src\prj\sound\buzzer.c</Path>
+            <Path>src\prj\sound\buzzer.h</Path>
+            <Path>src\prj\sound\sound.c</Path>
+            <Path>src\prj\sound\sound.h</Path>
+            <Path>src\prj\sound\voice.c</Path>
+            <Path>src\prj\sound\voice.h</Path>
+          </Category>
+          <Category Name="time_short">
+            <Path>src\prj\time_short\time_short.c</Path>
+            <Path>src\prj\time_short\time_short.h</Path>
+          </Category>
+          <Category Name="timer">
+            <Path>src\prj\timer\timer.c</Path>
+            <Path>src\prj\timer\timer.h</Path>
+            <Path>src\prj\timer\timer_id.h</Path>
+          </Category>
+          <Category Name="water">
+            <Path>src\prj\water\cody_water_out.c</Path>
+            <Path>src\prj\water\cody_water_out.h</Path>
+            <Path>src\prj\water\cold_water.c</Path>
+            <Path>src\prj\water\cold_water.h</Path>
+            <Path>src\prj\water\cold_water_out.c</Path>
+            <Path>src\prj\water\cold_water_out.h</Path>
+            <Path>src\prj\water\flush_water_out.c</Path>
+            <Path>src\prj\water\flush_water_out.h</Path>
+            <Path>src\prj\water\hot_water.c</Path>
+            <Path>src\prj\water\hot_water.h</Path>
+            <Path>src\prj\water\hot_water_out.c</Path>
+            <Path>src\prj\water\hot_water_out.h</Path>
+            <Path>src\prj\water\hot_water_out_preheat.c</Path>
+            <Path>src\prj\water\hot_water_out_preheat.h</Path>
+            <Path>src\prj\water\hot_water_temp_table.c</Path>
+            <Path>src\prj\water\hot_water_temp_table.h</Path>
+            <Path>src\prj\water\room_water_out.c</Path>
+            <Path>src\prj\water\room_water_out.h</Path>
+            <Path>src\prj\water\tank_clean.c</Path>
+            <Path>src\prj\water\tank_clean.h</Path>
+            <Path>src\prj\water\water_out.c</Path>
+            <Path>src\prj\water\water_out.h</Path>
+            <Path>src\prj\water\water_out_common.c</Path>
+            <Path>src\prj\water\water_out_common.h</Path>
+            <Path>src\prj\water\water_out_type.h</Path>
+          </Category>
+        </Category>
+        <Category Name="smc_gen">
+          <Category Name="Config_ADC">
+            <Path>src\smc_gen\Config_ADC\Config_ADC.c</Path>
+            <Path>src\smc_gen\Config_ADC\Config_ADC.h</Path>
+            <Path>src\smc_gen\Config_ADC\Config_ADC_user.c</Path>
+          </Category>
+          <Category Name="Config_IICA0">
+            <Path>src\smc_gen\Config_IICA0\Config_IICA0.c</Path>
+            <Path>src\smc_gen\Config_IICA0\Config_IICA0.h</Path>
+            <Path>src\smc_gen\Config_IICA0\Config_IICA0_user.c</Path>
+          </Category>
+          <Category Name="Config_INTC">
+            <Path>src\smc_gen\Config_INTC\Config_INTC.c</Path>
+            <Path>src\smc_gen\Config_INTC\Config_INTC.h</Path>
+            <Path>src\smc_gen\Config_INTC\Config_INTC_user.c</Path>
+          </Category>
+          <Category Name="Config_PORT">
+            <Path>src\smc_gen\Config_PORT\Config_PORT.c</Path>
+            <Path>src\smc_gen\Config_PORT\Config_PORT.h</Path>
+            <Path>src\smc_gen\Config_PORT\Config_PORT_user.c</Path>
+          </Category>
+          <Category Name="Config_TAU0_0">
+            <Path>src\smc_gen\Config_TAU0_0\Config_TAU0_0.c</Path>
+            <Path>src\smc_gen\Config_TAU0_0\Config_TAU0_0.h</Path>
+            <Path>src\smc_gen\Config_TAU0_0\Config_TAU0_0_user.c</Path>
+          </Category>
+          <Category Name="Config_TAU0_1">
+            <Path>src\smc_gen\Config_TAU0_1\Config_TAU0_1.c</Path>
+            <Path>src\smc_gen\Config_TAU0_1\Config_TAU0_1.h</Path>
+            <Path>src\smc_gen\Config_TAU0_1\Config_TAU0_1_user.c</Path>
+          </Category>
+          <Category Name="Config_TAU0_2">
+            <Path>src\smc_gen\Config_TAU0_2\Config_TAU0_2.c</Path>
+            <Path>src\smc_gen\Config_TAU0_2\Config_TAU0_2.h</Path>
+            <Path>src\smc_gen\Config_TAU0_2\Config_TAU0_2_user.c</Path>
+          </Category>
+          <Category Name="Config_TAU1_2">
+            <Path>src\smc_gen\Config_TAU1_2\Config_TAU1_2.c</Path>
+            <Path>src\smc_gen\Config_TAU1_2\Config_TAU1_2.h</Path>
+            <Path>src\smc_gen\Config_TAU1_2\Config_TAU1_2_user.c</Path>
+          </Category>
+          <Category Name="Config_UART0">
+            <Path>src\smc_gen\Config_UART0\Config_UART0.c</Path>
+            <Path>src\smc_gen\Config_UART0\Config_UART0.h</Path>
+            <Path>src\smc_gen\Config_UART0\Config_UART0_user.c</Path>
+          </Category>
+          <Category Name="Config_UART1">
+            <Path>src\smc_gen\Config_UART1\Config_UART1.c</Path>
+            <Path>src\smc_gen\Config_UART1\Config_UART1.h</Path>
+            <Path>src\smc_gen\Config_UART1\Config_UART1_user.c</Path>
+          </Category>
+          <Category Name="Config_UART2">
+            <Path>src\smc_gen\Config_UART2\Config_UART2.c</Path>
+            <Path>src\smc_gen\Config_UART2\Config_UART2.h</Path>
+            <Path>src\smc_gen\Config_UART2\Config_UART2_user.c</Path>
+          </Category>
+          <Category Name="Config_UART3">
+            <Path>src\smc_gen\Config_UART3\Config_UART3.c</Path>
+            <Path>src\smc_gen\Config_UART3\Config_UART3.h</Path>
+            <Path>src\smc_gen\Config_UART3\Config_UART3_user.c</Path>
+          </Category>
+          <Category Name="Config_WDT">
+            <Path>src\smc_gen\Config_WDT\Config_WDT.c</Path>
+            <Path>src\smc_gen\Config_WDT\Config_WDT.h</Path>
+            <Path>src\smc_gen\Config_WDT\Config_WDT_user.c</Path>
+          </Category>
+          <Category Name="general">
+            <Path>src\smc_gen\general\r_cg_ad.h</Path>
+            <Path>src\smc_gen\general\r_cg_ad_common.c</Path>
+            <Path>src\smc_gen\general\r_cg_ad_common.h</Path>
+            <Path>src\smc_gen\general\r_cg_iica.h</Path>
+            <Path>src\smc_gen\general\r_cg_iica_common.c</Path>
+            <Path>src\smc_gen\general\r_cg_iica_common.h</Path>
+            <Path>src\smc_gen\general\r_cg_intc.h</Path>
+            <Path>src\smc_gen\general\r_cg_lvd.h</Path>
+            <Path>src\smc_gen\general\r_cg_lvd_common.c</Path>
+            <Path>src\smc_gen\general\r_cg_lvd_common.h</Path>
+            <Path>src\smc_gen\general\r_cg_lvd_common_user.c</Path>
+            <Path>src\smc_gen\general\r_cg_macrodriver.h</Path>
+            <Path>src\smc_gen\general\r_cg_port.h</Path>
+            <Path>src\smc_gen\general\r_cg_sau.h</Path>
+            <Path>src\smc_gen\general\r_cg_sau_common.c</Path>
+            <Path>src\smc_gen\general\r_cg_sau_common.h</Path>
+            <Path>src\smc_gen\general\r_cg_systeminit.c</Path>
+            <Path>src\smc_gen\general\r_cg_tau.h</Path>
+            <Path>src\smc_gen\general\r_cg_tau_common.c</Path>
+            <Path>src\smc_gen\general\r_cg_tau_common.h</Path>
+            <Path>src\smc_gen\general\r_cg_userdefine.h</Path>
+            <Path>src\smc_gen\general\r_cg_wdt.h</Path>
+            <Path>src\smc_gen\general\r_smc_entry.h</Path>
+          </Category>
+          <Category Name="r_bsp">
+            <Path>src\smc_gen\r_bsp\platform.h</Path>
+            <Path>src\smc_gen\r_bsp\readme.txt</Path>
+            <Category Name="board">
+              <Category Name="generic_rl78_g23">
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.h</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp.h</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference.h</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_ccrl.inc</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_iccrl.inc</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_llvm.inc</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm</Path>
+              </Category>
+            </Category>
+            <Category Name="doc">
+              <Category Name="en">
+                <Path>src\smc_gen\r_bsp\doc\en\r01an5522ej0161-rl78-bsp.pdf</Path>
+              </Category>
+              <Category Name="ja">
+                <Path>src\smc_gen\r_bsp\doc\ja\r01an5522jj0161-rl78-bsp.pdf</Path>
+              </Category>
+            </Category>
+            <Category Name="mcu">
+              <Category Name="all">
+                <Path>src\smc_gen\r_bsp\mcu\all\cstart.asm</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\fsp_common_api.h</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_common.c</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_common.h</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_rl78_compiler.h</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\r_fsp_error.h</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\r_rtos.h</Path>
+              </Category>
+              <Category Name="rl78_g23">
+                <Path>src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c</Path>
+                <Path>src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.h</Path>
+                <Path>src\smc_gen\r_bsp\mcu\rl78_g23\mcu_info.h</Path>
+                <Category Name="register_access">
+                  <Category Name="ccrl">
+                    <Path>src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl\iodefine.h</Path>
+                  </Category>
+                </Category>
+              </Category>
+            </Category>
+          </Category>
+          <Category Name="r_config">
+            <Path>src\smc_gen\r_config\r_bsp_config.h</Path>
+            <Path>src\smc_gen\r_config\r_bsp_config.inc</Path>
+          </Category>
+          <Category Name="r_pincfg">
+            <Path>src\smc_gen\r_pincfg\Pin.c</Path>
+            <Path>src\smc_gen\r_pincfg\Pin.h</Path>
+          </Category>
+        </Category>
+      </Category>
+      <Category Name="trash">
+        <Category Name="2024-02-21-09-31-07">
+          <Category Name="src">
+            <Category Name="smc_gen">
+              <Category Name="Config_ADC">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_ADC\Config_ADC.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_ADC\Config_ADC.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_ADC\Config_ADC_user.c</Path>
+              </Category>
+              <Category Name="Config_IICA0">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_IICA0\Config_IICA0.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_IICA0\Config_IICA0.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_IICA0\Config_IICA0_user.c</Path>
+              </Category>
+              <Category Name="Config_INTC">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_INTC\Config_INTC.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_INTC\Config_INTC.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_INTC\Config_INTC_user.c</Path>
+              </Category>
+              <Category Name="Config_PORT">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_PORT\Config_PORT.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_PORT\Config_PORT.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_PORT\Config_PORT_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_0">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_0\Config_TAU0_0.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_0\Config_TAU0_0.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_0\Config_TAU0_0_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_1">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_1\Config_TAU0_1.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_1\Config_TAU0_1.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_1\Config_TAU0_1_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_2">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_2\Config_TAU0_2.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_2\Config_TAU0_2.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_2\Config_TAU0_2_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU1_2">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU1_2\Config_TAU1_2.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU1_2\Config_TAU1_2.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU1_2\Config_TAU1_2_user.c</Path>
+              </Category>
+              <Category Name="Config_UART0">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_UART0\Config_UART0.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_UART0\Config_UART0.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_UART0\Config_UART0_user.c</Path>
+              </Category>
+              <Category Name="Config_UART1">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_UART1\Config_UART1.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_UART1\Config_UART1.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_UART1\Config_UART1_user.c</Path>
+              </Category>
+              <Category Name="Config_UART2">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_UART2\Config_UART2.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_UART2\Config_UART2.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_UART2\Config_UART2_user.c</Path>
+              </Category>
+              <Category Name="Config_UART3">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_UART3\Config_UART3.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_UART3\Config_UART3.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_UART3\Config_UART3_user.c</Path>
+              </Category>
+              <Category Name="Config_WDT">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_WDT\Config_WDT.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_WDT\Config_WDT.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\Config_WDT\Config_WDT_user.c</Path>
+              </Category>
+              <Category Name="general">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_ad.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_ad_common.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_ad_common.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_iica.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_iica_common.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_iica_common.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_intc.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_lvd.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_lvd_common.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_lvd_common.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_lvd_common_user.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_macrodriver.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_port.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_sau.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_sau_common.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_sau_common.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_systeminit.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_tau.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_tau_common.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_tau_common.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_userdefine.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_wdt.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\general\r_smc_entry.h</Path>
+              </Category>
+              <Category Name="r_bsp">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\platform.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\readme.txt</Path>
+                <Category Name="board">
+                  <Category Name="generic_rl78_g23">
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.h</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp.h</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference.h</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_ccrl.inc</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_iccrl.inc</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_llvm.inc</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm</Path>
+                  </Category>
+                </Category>
+                <Category Name="mcu">
+                  <Category Name="all">
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\all\cstart.asm</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\all\fsp_common_api.h</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\all\r_bsp_common.h</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\all\r_bsp_rl78_compiler.h</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\all\r_fsp_error.h</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\all\r_rtos.h</Path>
+                  </Category>
+                  <Category Name="rl78_g23">
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.h</Path>
+                    <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_info.h</Path>
+                    <Category Name="register_access">
+                      <Category Name="ccrl">
+                        <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl\iodefine.h</Path>
+                      </Category>
+                    </Category>
+                  </Category>
+                </Category>
+              </Category>
+              <Category Name="r_config">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_config\r_bsp_config.h</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_config\r_bsp_config.inc</Path>
+              </Category>
+              <Category Name="r_pincfg">
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_pincfg\Pin.c</Path>
+                <Path>trash\2024-02-21-09-31-07\src\smc_gen\r_pincfg\Pin.h</Path>
+              </Category>
+            </Category>
+          </Category>
+        </Category>
+        <Category Name="2024-02-22-14-11-03">
+          <Category Name="src">
+            <Category Name="smc_gen">
+              <Category Name="Config_ADC">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_ADC\Config_ADC.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_ADC\Config_ADC.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_ADC\Config_ADC_user.c</Path>
+              </Category>
+              <Category Name="Config_IICA0">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_IICA0\Config_IICA0.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_IICA0\Config_IICA0.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_IICA0\Config_IICA0_user.c</Path>
+              </Category>
+              <Category Name="Config_INTC">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_INTC\Config_INTC.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_INTC\Config_INTC.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_INTC\Config_INTC_user.c</Path>
+              </Category>
+              <Category Name="Config_PORT">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_PORT\Config_PORT.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_PORT\Config_PORT.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_PORT\Config_PORT_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_0">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_0\Config_TAU0_0.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_0\Config_TAU0_0.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_0\Config_TAU0_0_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_1">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_1\Config_TAU0_1.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_1\Config_TAU0_1.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_1\Config_TAU0_1_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_2">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_2\Config_TAU0_2.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_2\Config_TAU0_2.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_2\Config_TAU0_2_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU1_2">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU1_2\Config_TAU1_2.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU1_2\Config_TAU1_2.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU1_2\Config_TAU1_2_user.c</Path>
+              </Category>
+              <Category Name="Config_UART0">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_UART0\Config_UART0.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_UART0\Config_UART0.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_UART0\Config_UART0_user.c</Path>
+              </Category>
+              <Category Name="Config_UART1">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_UART1\Config_UART1.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_UART1\Config_UART1.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_UART1\Config_UART1_user.c</Path>
+              </Category>
+              <Category Name="Config_UART2">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_UART2\Config_UART2.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_UART2\Config_UART2.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_UART2\Config_UART2_user.c</Path>
+              </Category>
+              <Category Name="Config_UART3">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_UART3\Config_UART3.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_UART3\Config_UART3.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_UART3\Config_UART3_user.c</Path>
+              </Category>
+              <Category Name="Config_WDT">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_WDT\Config_WDT.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_WDT\Config_WDT.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\Config_WDT\Config_WDT_user.c</Path>
+              </Category>
+              <Category Name="general">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_ad.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_ad_common.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_ad_common.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_iica.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_iica_common.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_iica_common.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_intc.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_lvd.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_lvd_common.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_lvd_common.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_lvd_common_user.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_macrodriver.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_port.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_sau.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_sau_common.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_sau_common.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_systeminit.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_tau.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_tau_common.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_tau_common.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_userdefine.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_wdt.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\general\r_smc_entry.h</Path>
+              </Category>
+              <Category Name="r_bsp">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\platform.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\readme.txt</Path>
+                <Category Name="board">
+                  <Category Name="generic_rl78_g23">
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.h</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp.h</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference.h</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_ccrl.inc</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_iccrl.inc</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_llvm.inc</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm</Path>
+                  </Category>
+                </Category>
+                <Category Name="mcu">
+                  <Category Name="all">
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\all\cstart.asm</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\all\fsp_common_api.h</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\all\r_bsp_common.h</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\all\r_bsp_rl78_compiler.h</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\all\r_fsp_error.h</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\all\r_rtos.h</Path>
+                  </Category>
+                  <Category Name="rl78_g23">
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.h</Path>
+                    <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_info.h</Path>
+                    <Category Name="register_access">
+                      <Category Name="ccrl">
+                        <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl\iodefine.h</Path>
+                      </Category>
+                    </Category>
+                  </Category>
+                </Category>
+              </Category>
+              <Category Name="r_config">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_config\r_bsp_config.h</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_config\r_bsp_config.inc</Path>
+              </Category>
+              <Category Name="r_pincfg">
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_pincfg\Pin.c</Path>
+                <Path>trash\2024-02-22-14-11-03\src\smc_gen\r_pincfg\Pin.h</Path>
+              </Category>
+            </Category>
+          </Category>
+        </Category>
+        <Category Name="2024-03-06-11-28-42">
+          <Category Name="src">
+            <Category Name="smc_gen">
+              <Category Name="Config_ADC">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_ADC\Config_ADC.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_ADC\Config_ADC.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_ADC\Config_ADC_user.c</Path>
+              </Category>
+              <Category Name="Config_IICA0">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_IICA0\Config_IICA0.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_IICA0\Config_IICA0.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_IICA0\Config_IICA0_user.c</Path>
+              </Category>
+              <Category Name="Config_INTC">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_INTC\Config_INTC.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_INTC\Config_INTC.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_INTC\Config_INTC_user.c</Path>
+              </Category>
+              <Category Name="Config_PORT">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_PORT\Config_PORT.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_PORT\Config_PORT.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_PORT\Config_PORT_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_0">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_0\Config_TAU0_0.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_0\Config_TAU0_0.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_0\Config_TAU0_0_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_1">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_1\Config_TAU0_1.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_1\Config_TAU0_1.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_1\Config_TAU0_1_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_2">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_2\Config_TAU0_2.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_2\Config_TAU0_2.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_2\Config_TAU0_2_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU1_2">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU1_2\Config_TAU1_2.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU1_2\Config_TAU1_2.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU1_2\Config_TAU1_2_user.c</Path>
+              </Category>
+              <Category Name="Config_UART0">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_UART0\Config_UART0.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_UART0\Config_UART0.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_UART0\Config_UART0_user.c</Path>
+              </Category>
+              <Category Name="Config_UART1">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_UART1\Config_UART1.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_UART1\Config_UART1.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_UART1\Config_UART1_user.c</Path>
+              </Category>
+              <Category Name="Config_UART2">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_UART2\Config_UART2.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_UART2\Config_UART2.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_UART2\Config_UART2_user.c</Path>
+              </Category>
+              <Category Name="Config_UART3">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_UART3\Config_UART3.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_UART3\Config_UART3.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_UART3\Config_UART3_user.c</Path>
+              </Category>
+              <Category Name="Config_WDT">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_WDT\Config_WDT.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_WDT\Config_WDT.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\Config_WDT\Config_WDT_user.c</Path>
+              </Category>
+              <Category Name="general">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_ad.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_ad_common.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_ad_common.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_iica.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_iica_common.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_iica_common.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_intc.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_lvd.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_lvd_common.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_lvd_common.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_lvd_common_user.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_macrodriver.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_port.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_sau.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_sau_common.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_sau_common.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_systeminit.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_tau.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_tau_common.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_tau_common.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_userdefine.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_wdt.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\general\r_smc_entry.h</Path>
+              </Category>
+              <Category Name="r_bsp">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\platform.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\readme.txt</Path>
+                <Category Name="board">
+                  <Category Name="generic_rl78_g23">
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.h</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp.h</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference.h</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_ccrl.inc</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_iccrl.inc</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_llvm.inc</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm</Path>
+                  </Category>
+                </Category>
+                <Category Name="mcu">
+                  <Category Name="all">
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\all\cstart.asm</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\all\fsp_common_api.h</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\all\r_bsp_common.h</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\all\r_bsp_rl78_compiler.h</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\all\r_fsp_error.h</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\all\r_rtos.h</Path>
+                  </Category>
+                  <Category Name="rl78_g23">
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.h</Path>
+                    <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_info.h</Path>
+                    <Category Name="register_access">
+                      <Category Name="ccrl">
+                        <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl\iodefine.h</Path>
+                      </Category>
+                    </Category>
+                  </Category>
+                </Category>
+              </Category>
+              <Category Name="r_config">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_config\r_bsp_config.h</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_config\r_bsp_config.inc</Path>
+              </Category>
+              <Category Name="r_pincfg">
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_pincfg\Pin.c</Path>
+                <Path>trash\2024-03-06-11-28-42\src\smc_gen\r_pincfg\Pin.h</Path>
+              </Category>
+            </Category>
+          </Category>
+        </Category>
+        <Category Name="2024-03-26-09-29-48">
+          <Category Name="src">
+            <Category Name="smc_gen">
+              <Category Name="Config_ADC">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_ADC\Config_ADC.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_ADC\Config_ADC.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_ADC\Config_ADC_user.c</Path>
+              </Category>
+              <Category Name="Config_IICA0">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_IICA0\Config_IICA0.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_IICA0\Config_IICA0.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_IICA0\Config_IICA0_user.c</Path>
+              </Category>
+              <Category Name="Config_INTC">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_INTC\Config_INTC.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_INTC\Config_INTC.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_INTC\Config_INTC_user.c</Path>
+              </Category>
+              <Category Name="Config_PORT">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_PORT\Config_PORT.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_PORT\Config_PORT.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_PORT\Config_PORT_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_0">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_0\Config_TAU0_0.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_0\Config_TAU0_0.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_0\Config_TAU0_0_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_1">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_1\Config_TAU0_1.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_1\Config_TAU0_1.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_1\Config_TAU0_1_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_2">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_2\Config_TAU0_2.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_2\Config_TAU0_2.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_2\Config_TAU0_2_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU1_2">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU1_2\Config_TAU1_2.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU1_2\Config_TAU1_2.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU1_2\Config_TAU1_2_user.c</Path>
+              </Category>
+              <Category Name="Config_UART0">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_UART0\Config_UART0.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_UART0\Config_UART0.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_UART0\Config_UART0_user.c</Path>
+              </Category>
+              <Category Name="Config_UART1">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_UART1\Config_UART1.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_UART1\Config_UART1.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_UART1\Config_UART1_user.c</Path>
+              </Category>
+              <Category Name="Config_UART2">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_UART2\Config_UART2.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_UART2\Config_UART2.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_UART2\Config_UART2_user.c</Path>
+              </Category>
+              <Category Name="Config_UART3">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_UART3\Config_UART3.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_UART3\Config_UART3.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_UART3\Config_UART3_user.c</Path>
+              </Category>
+              <Category Name="Config_WDT">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_WDT\Config_WDT.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_WDT\Config_WDT.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\Config_WDT\Config_WDT_user.c</Path>
+              </Category>
+              <Category Name="general">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_ad.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_ad_common.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_ad_common.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_iica.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_iica_common.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_iica_common.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_intc.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_lvd.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_lvd_common.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_lvd_common.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_lvd_common_user.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_macrodriver.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_port.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_sau.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_sau_common.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_sau_common.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_systeminit.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_tau.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_tau_common.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_tau_common.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_userdefine.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_wdt.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\general\r_smc_entry.h</Path>
+              </Category>
+              <Category Name="r_bsp">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\platform.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\readme.txt</Path>
+                <Category Name="board">
+                  <Category Name="generic_rl78_g23">
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.h</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp.h</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference.h</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_ccrl.inc</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_iccrl.inc</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_llvm.inc</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm</Path>
+                  </Category>
+                </Category>
+                <Category Name="mcu">
+                  <Category Name="all">
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\all\cstart.asm</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\all\fsp_common_api.h</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\all\r_bsp_common.h</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\all\r_bsp_rl78_compiler.h</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\all\r_fsp_error.h</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\all\r_rtos.h</Path>
+                  </Category>
+                  <Category Name="rl78_g23">
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.h</Path>
+                    <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_info.h</Path>
+                    <Category Name="register_access">
+                      <Category Name="ccrl">
+                        <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl\iodefine.h</Path>
+                      </Category>
+                    </Category>
+                  </Category>
+                </Category>
+              </Category>
+              <Category Name="r_config">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_config\r_bsp_config.h</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_config\r_bsp_config.inc</Path>
+              </Category>
+              <Category Name="r_pincfg">
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_pincfg\Pin.c</Path>
+                <Path>trash\2024-03-26-09-29-48\src\smc_gen\r_pincfg\Pin.h</Path>
+              </Category>
+            </Category>
+          </Category>
+        </Category>
+        <Category Name="2024-03-26-09-31-23">
+          <Category Name="src">
+            <Category Name="smc_gen">
+              <Category Name="Config_ADC">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_ADC\Config_ADC.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_ADC\Config_ADC.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_ADC\Config_ADC_user.c</Path>
+              </Category>
+              <Category Name="Config_IICA0">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_IICA0\Config_IICA0.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_IICA0\Config_IICA0.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_IICA0\Config_IICA0_user.c</Path>
+              </Category>
+              <Category Name="Config_INTC">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_INTC\Config_INTC.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_INTC\Config_INTC.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_INTC\Config_INTC_user.c</Path>
+              </Category>
+              <Category Name="Config_PORT">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_PORT\Config_PORT.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_PORT\Config_PORT.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_PORT\Config_PORT_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_0">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_0\Config_TAU0_0.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_0\Config_TAU0_0.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_0\Config_TAU0_0_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_1">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_1\Config_TAU0_1.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_1\Config_TAU0_1.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_1\Config_TAU0_1_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU0_2">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_2\Config_TAU0_2.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_2\Config_TAU0_2.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_2\Config_TAU0_2_user.c</Path>
+              </Category>
+              <Category Name="Config_TAU1_2">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU1_2\Config_TAU1_2.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU1_2\Config_TAU1_2.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU1_2\Config_TAU1_2_user.c</Path>
+              </Category>
+              <Category Name="Config_UART0">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_UART0\Config_UART0.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_UART0\Config_UART0.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_UART0\Config_UART0_user.c</Path>
+              </Category>
+              <Category Name="Config_UART1">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_UART1\Config_UART1.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_UART1\Config_UART1.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_UART1\Config_UART1_user.c</Path>
+              </Category>
+              <Category Name="Config_UART2">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_UART2\Config_UART2.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_UART2\Config_UART2.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_UART2\Config_UART2_user.c</Path>
+              </Category>
+              <Category Name="Config_UART3">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_UART3\Config_UART3.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_UART3\Config_UART3.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_UART3\Config_UART3_user.c</Path>
+              </Category>
+              <Category Name="Config_WDT">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_WDT\Config_WDT.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_WDT\Config_WDT.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\Config_WDT\Config_WDT_user.c</Path>
+              </Category>
+              <Category Name="general">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_ad.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_ad_common.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_ad_common.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_iica.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_iica_common.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_iica_common.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_intc.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_lvd.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_lvd_common.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_lvd_common.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_lvd_common_user.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_macrodriver.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_port.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_sau.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_sau_common.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_sau_common.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_systeminit.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_tau.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_tau_common.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_tau_common.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_userdefine.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_wdt.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\general\r_smc_entry.h</Path>
+              </Category>
+              <Category Name="r_bsp">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\platform.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\readme.txt</Path>
+                <Category Name="board">
+                  <Category Name="generic_rl78_g23">
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.h</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp.h</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference.h</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_ccrl.inc</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_iccrl.inc</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_llvm.inc</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm</Path>
+                  </Category>
+                </Category>
+                <Category Name="mcu">
+                  <Category Name="all">
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\all\cstart.asm</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\all\fsp_common_api.h</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\all\r_bsp_common.h</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\all\r_bsp_rl78_compiler.h</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\all\r_fsp_error.h</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\all\r_rtos.h</Path>
+                  </Category>
+                  <Category Name="rl78_g23">
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.h</Path>
+                    <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_info.h</Path>
+                    <Category Name="register_access">
+                      <Category Name="ccrl">
+                        <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl\iodefine.h</Path>
+                      </Category>
+                    </Category>
+                  </Category>
+                </Category>
+              </Category>
+              <Category Name="r_config">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_config\r_bsp_config.h</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_config\r_bsp_config.inc</Path>
+              </Category>
+              <Category Name="r_pincfg">
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_pincfg\Pin.c</Path>
+                <Path>trash\2024-03-26-09-31-23\src\smc_gen\r_pincfg\Pin.h</Path>
+              </Category>
+            </Category>
+          </Category>
+        </Category>
+      </Category>
+    </Files>
+    <Device Category="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.cpu.s3" Series="RL78">R7F100GPJxFB</Device>
+    <BuildOptions Name="CC-RL" Version="v1.13.00">
+      <BuildMode Active="True" Name="HardwareDebug">
+        <GeneralOptions/>
+        <CompileOptions>
+          <Option>-cpu=S3</Option>
+          <Option>-c</Option>
+          <Option>-dev="C:/Users/20017497/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR7F100GPJ.DVF"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\Wifi\WifiUser\AIS4.0"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\sensor"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\health"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\water"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\io"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\lever"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\timer"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\drain"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\hal"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\Wifi"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\comm"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\Wifi\WifiTx"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\iocare"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\eeprom"</Option>
+          <Option>-I "${ProjDirPath}\src\prj"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\time_short"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\filter"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\Wifi\WifiEtc"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\error"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\Wifi\WifiUser"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\ice_maker"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\service_check"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\sound"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\Wifi\WifiRx"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\metering"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\eol"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\Wifi\WifiSetting"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\diagnosis"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\fct"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\display"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\power_saving"</Option>
+          <Option>-I "${ProjDirPath}\src\prj\key"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_pincfg"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\general"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_config"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_TAU0_2"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_IICA0"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_UART0"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_TAU1_2"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_TAU0_0"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_PORT"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_TAU0_1"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_ADC"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_WDT"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_UART2"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_INTC"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_UART1"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_UART3"</Option>
+          <Option>-character_set=utf8</Option>
+          <Option>-g</Option>
+          <Option>-o ${workspace_loc}\${ProjName}/${ConfigName}</Option>
+          <Option>-memory_model=medium</Option>
+          <Option>-far_rom</Option>
+          <Option>-Onothing</Option>
+          <Option>-pack</Option>
+          <Option>-signed_char</Option>
+          <Option>-lang=c99</Option>
+        </CompileOptions>
+        <AssembleOptions>
+          <Option>-cpu=S3</Option>
+          <Option>-c</Option>
+          <Option>-dev="C:/Users/20017497/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR7F100GPJ.DVF"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_pincfg"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\general"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_config"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_TAU0_2"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_IICA0"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_UART0"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_TAU1_2"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_TAU0_0"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_PORT"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_TAU0_1"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_ADC"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_WDT"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_UART2"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_INTC"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_UART1"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_UART3"</Option>
+          <Option>-character_set=utf8</Option>
+          <Option>-g</Option>
+          <Option>-o "${ProjDirPath}/${ConfigName}"</Option>
+        </AssembleOptions>
+        <SmsAssembleOptions>
+          <Option>-I "${ProjDirPath}\src\smc_gen"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_pincfg"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\general"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_config"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_TAU0_2"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_IICA0"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_UART0"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_TAU1_2"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_TAU0_0"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_PORT"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_TAU0_1"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_ADC"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_WDT"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_UART2"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_INTC"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_UART1"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_UART3"</Option>
+          <Option>-o "${CWD}"</Option>
+          <Option>-character_set=utf8</Option>
+        </SmsAssembleOptions>
+        <LinkOptions>
+          <Option>-device="C:/Users/20017497/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR7F100GPJ.DVF"</Option>
+          <Option>-list</Option>
+          <Option>-nooptimize</Option>
+          <Option>-entry=_start</Option>
+          <Option>-auto_section_layout</Option>
+          <Option>-security_id=00000000000000000000</Option>
+          <Option>-debug_monitor=3FE00-3FFFF</Option>
+          <Option>-user_opt_byte=7FFAE8</Option>
+          <Option>-ocdbg=84</Option>
+          <Option>-ocdtr</Option>
+          <Option>-output="${ProjName}.abs"</Option>
+          <Option>-debug</Option>
+          <Option>-nocompress</Option>
+          <Option>-memory=high</Option>
+          <Option>-rom=.data=.dataR,.sdata=.sdataR</Option>
+          <Option>-nomessage</Option>
+          <Option>-nologo</Option>
+          <Option>-library="C:\Program Files (x86)\Renesas\RL78\1_13_0\lib\rl78em4s99.lib"</Option>
+          <Option>-library="C:\Program Files (x86)\Renesas\RL78\1_13_0\lib\rl78em4r.lib"</Option>
+          <Option>-end</Option>
+          <Option>-output="${ProjName}.hex"</Option>
+          <Option>-form=hexadecimal</Option>
+          <Option>-byte_count=FF</Option>
+          <Option>-nomessage</Option>
+          <Option>-nologo</Option>
+          <Option>-exit</Option>
+          <PreLinker>Auto</PreLinker>
+        </LinkOptions>
+        <LibraryGenerateOptions>
+          <GenerateMode>BuildOptionChanged</GenerateMode>
+        </LibraryGenerateOptions>
+        <LinkOrder>
+          <Path>HardwareDebug\src/smc_gen/r_bsp/board/generic_rl78_g23\stkinit.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/r_bsp/mcu/all\cstart.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/r_bsp/mcu/all\r_bsp_common_ccrl.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiEtc\WIFI_DataCheck.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiEtc\WIFI_Initialize.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiEtc\WIFI_ProcessApmode.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiEtc\WIFI_Status.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiEtc\WIFI_UartInterrupt.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiRx\WIFI_Fota.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiRx\WIFI_RxProcess.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiRx\WIFI_RxServer.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiSetting\WIFI_SetAccumulateData.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiSetting\WIFI_SetCommon.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiSetting\WIFI_SetErrorData.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiSetting\WIFI_SetFunctionData.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiSetting\WIFI_SetInformationData.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiSetting\WIFI_SetMonitorData.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiSetting\WIFI_SetPartData.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiSetting\WIFI_SetSensorData.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiTx\WIFI_TxForm.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiTx\WIFI_TxMake.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiTx\WIFI_TxProtocol.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiUser/AIS4.0\WIFI_MonitorFixRAM.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiUser/AIS4.0\WIFI_UserInterface_IconAIS.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiUser\WIFI_Common.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiUser\WIFI_Control.obj</Path>
+          <Path>HardwareDebug\src/prj/Wifi/WifiUser\WIFI_UserInterface.obj</Path>
+          <Path>HardwareDebug\src/prj/comm\comm.obj</Path>
+          <Path>HardwareDebug\src/prj/comm\crc16.obj</Path>
+          <Path>HardwareDebug\src/prj/comm\parser.obj</Path>
+          <Path>HardwareDebug\src/prj/comm\parser_comp.obj</Path>
+          <Path>HardwareDebug\src/prj/comm\parser_debug.obj</Path>
+          <Path>HardwareDebug\src/prj/comm\parser_eol.obj</Path>
+          <Path>HardwareDebug\src/prj/comm\parser_front.obj</Path>
+          <Path>HardwareDebug\src/prj/diagnosis\diagnosis.obj</Path>
+          <Path>HardwareDebug\src/prj/diagnosis\diagnosis_12v.obj</Path>
+          <Path>HardwareDebug\src/prj/diagnosis\diagnosis_24v.obj</Path>
+          <Path>HardwareDebug\src/prj/diagnosis\diagnosis_ac.obj</Path>
+          <Path>HardwareDebug\src/prj/diagnosis\diagnosis_feedback.obj</Path>
+          <Path>HardwareDebug\src/prj/diagnosis\diagnosis_sensor.obj</Path>
+          <Path>HardwareDebug\src/prj/diagnosis\monitoring.obj</Path>
+          <Path>HardwareDebug\src/prj/display\display.obj</Path>
+          <Path>HardwareDebug\src/prj/display\display_clock.obj</Path>
+          <Path>HardwareDebug\src/prj/display\display_eol.obj</Path>
+          <Path>HardwareDebug\src/prj/display\display_error.obj</Path>
+          <Path>HardwareDebug\src/prj/display\display_lib.obj</Path>
+          <Path>HardwareDebug\src/prj/display\front.obj</Path>
+          <Path>HardwareDebug\src/prj/display\process_display.obj</Path>
+          <Path>HardwareDebug\src/prj/drain\drain.obj</Path>
+          <Path>HardwareDebug\src/prj/drain\empty_cold_tank.obj</Path>
+          <Path>HardwareDebug\src/prj/eeprom\eeprom.obj</Path>
+          <Path>HardwareDebug\src/prj/eeprom\rtc.obj</Path>
+          <Path>HardwareDebug\src/prj/eol\eol.obj</Path>
+          <Path>HardwareDebug\src/prj/eol\eol_lever_handler.obj</Path>
+          <Path>HardwareDebug\src/prj/eol\key_eol_handler.obj</Path>
+          <Path>HardwareDebug\src/prj/eol\process_eol.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_comp_bldc.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_comp_bldc_comm.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_drain_pump.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_ice_tray.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_leak.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_leak_flow.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_outage_hot_water.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_outage_ice_tray.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_outage_water.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_temp.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_temp_ambient.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_temp_cold_water.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_temp_eva_1.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_temp_heater.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_temp_hot_overheat.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_temp_hot_water.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_temp_hot_water_in.obj</Path>
+          <Path>HardwareDebug\src/prj/error\err_temp_room_water.obj</Path>
+          <Path>HardwareDebug\src/prj/error\error.obj</Path>
+          <Path>HardwareDebug\src/prj/error\process_error.obj</Path>
+          <Path>HardwareDebug\src/prj/fct\fct.obj</Path>
+          <Path>HardwareDebug\src/prj/fct\fct_lever_handler.obj</Path>
+          <Path>HardwareDebug\src/prj/fct\key_fct_handler.obj</Path>
+          <Path>HardwareDebug\src/prj/fct\process_fct.obj</Path>
+          <Path>HardwareDebug\src/prj/filter\filter.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_adc.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_eeprom.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_fan_motor.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_i2c.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_input.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_key.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_led.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_level.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_pump.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_relay.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_serial.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_step_motor.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_uv.obj</Path>
+          <Path>HardwareDebug\src/prj/hal\hal_valve.obj</Path>
+          <Path>HardwareDebug\src/prj/health\drain_water.obj</Path>
+          <Path>HardwareDebug\src/prj/health\health.obj</Path>
+          <Path>HardwareDebug\src/prj/health\health_maker.obj</Path>
+          <Path>HardwareDebug\src/prj/health\process_uv.obj</Path>
+          <Path>HardwareDebug\src/prj/health\uv.obj</Path>
+          <Path>HardwareDebug\src/prj/ice_maker\deicing_table.obj</Path>
+          <Path>HardwareDebug\src/prj/ice_maker\dummy_deicing_table.obj</Path>
+          <Path>HardwareDebug\src/prj/ice_maker\ice.obj</Path>
+          <Path>HardwareDebug\src/prj/ice_maker\ice_maker.obj</Path>
+          <Path>HardwareDebug\src/prj/ice_maker\icing_table.obj</Path>
+          <Path>HardwareDebug\src/prj/io\comp.obj</Path>
+          <Path>HardwareDebug\src/prj/io\comp_bldc.obj</Path>
+          <Path>HardwareDebug\src/prj/io\drain_pump.obj</Path>
+          <Path>HardwareDebug\src/prj/io\fan_motor.obj</Path>
+          <Path>HardwareDebug\src/prj/io\flow_meter.obj</Path>
+          <Path>HardwareDebug\src/prj/io\flow_valve.obj</Path>
+          <Path>HardwareDebug\src/prj/io\gas_switch_valve.obj</Path>
+          <Path>HardwareDebug\src/prj/io\heater_out.obj</Path>
+          <Path>HardwareDebug\src/prj/io\heater_table.obj</Path>
+          <Path>HardwareDebug\src/prj/io\hot_water_flow.obj</Path>
+          <Path>HardwareDebug\src/prj/io\hot_water_heater.obj</Path>
+          <Path>HardwareDebug\src/prj/io\ice_door.obj</Path>
+          <Path>HardwareDebug\src/prj/io\ice_full.obj</Path>
+          <Path>HardwareDebug\src/prj/io\ice_tray.obj</Path>
+          <Path>HardwareDebug\src/prj/io\leak.obj</Path>
+          <Path>HardwareDebug\src/prj/io\process_make.obj</Path>
+          <Path>HardwareDebug\src/prj/io\relay.obj</Path>
+          <Path>HardwareDebug\src/prj/io\smps.obj</Path>
+          <Path>HardwareDebug\src/prj/io\swing_bar.obj</Path>
+          <Path>HardwareDebug\src/prj/io\valve.obj</Path>
+          <Path>HardwareDebug\src/prj/iocare\energy.obj</Path>
+          <Path>HardwareDebug\src/prj/iocare\smart_check.obj</Path>
+          <Path>HardwareDebug\src/prj/iocare\user.obj</Path>
+          <Path>HardwareDebug\src/prj/key\key.obj</Path>
+          <Path>HardwareDebug\src/prj/key\key_event_lib.obj</Path>
+          <Path>HardwareDebug\src/prj/key\key_handler.obj</Path>
+          <Path>HardwareDebug\src/prj/key\key_normal_handler.obj</Path>
+          <Path>HardwareDebug\src/prj/key\process_key.obj</Path>
+          <Path>HardwareDebug\src/prj/lever\lever.obj</Path>
+          <Path>HardwareDebug\src/prj/lever\lever_handler.obj</Path>
+          <Path>HardwareDebug\src/prj/lever\process_lever.obj</Path>
+          <Path>HardwareDebug\src/prj\main.obj</Path>
+          <Path>HardwareDebug\src/prj/metering\metering.obj</Path>
+          <Path>HardwareDebug\src/prj/power_saving\eco.obj</Path>
+          <Path>HardwareDebug\src/prj/power_saving\power_saving.obj</Path>
+          <Path>HardwareDebug\src/prj\process_sys_event.obj</Path>
+          <Path>HardwareDebug\src/prj/sensor\level.obj</Path>
+          <Path>HardwareDebug\src/prj/sensor\temp.obj</Path>
+          <Path>HardwareDebug\src/prj/sensor\temp_table_ambient.obj</Path>
+          <Path>HardwareDebug\src/prj/sensor\temp_table_cold.obj</Path>
+          <Path>HardwareDebug\src/prj/sensor\temp_table_cold_lattron.obj</Path>
+          <Path>HardwareDebug\src/prj/sensor\temp_table_common.obj</Path>
+          <Path>HardwareDebug\src/prj/sensor\temp_table_eva.obj</Path>
+          <Path>HardwareDebug\src/prj/sensor\temp_table_hot_in_out.obj</Path>
+          <Path>HardwareDebug\src/prj/sensor\temp_table_ice_tray_in.obj</Path>
+          <Path>HardwareDebug\src/prj/sensor\temp_table_room.obj</Path>
+          <Path>HardwareDebug\src/prj/service_check\cody_kit.obj</Path>
+          <Path>HardwareDebug\src/prj/service_check\ice_tray_test.obj</Path>
+          <Path>HardwareDebug\src/prj/service_check\service.obj</Path>
+          <Path>HardwareDebug\src/prj/sound\buzzer.obj</Path>
+          <Path>HardwareDebug\src/prj/sound\sound.obj</Path>
+          <Path>HardwareDebug\src/prj/sound\voice.obj</Path>
+          <Path>HardwareDebug\src/prj/time_short\time_short.obj</Path>
+          <Path>HardwareDebug\src/prj/timer\timer.obj</Path>
+          <Path>HardwareDebug\src/prj\util.obj</Path>
+          <Path>HardwareDebug\src/prj/water\cody_water_out.obj</Path>
+          <Path>HardwareDebug\src/prj/water\cold_water.obj</Path>
+          <Path>HardwareDebug\src/prj/water\cold_water_out.obj</Path>
+          <Path>HardwareDebug\src/prj/water\flush_water_out.obj</Path>
+          <Path>HardwareDebug\src/prj/water\hot_water.obj</Path>
+          <Path>HardwareDebug\src/prj/water\hot_water_out.obj</Path>
+          <Path>HardwareDebug\src/prj/water\hot_water_out_preheat.obj</Path>
+          <Path>HardwareDebug\src/prj/water\hot_water_temp_table.obj</Path>
+          <Path>HardwareDebug\src/prj/water\room_water_out.obj</Path>
+          <Path>HardwareDebug\src/prj/water\tank_clean.obj</Path>
+          <Path>HardwareDebug\src/prj/water\water_out.obj</Path>
+          <Path>HardwareDebug\src/prj/water\water_out_common.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_ADC\Config_ADC.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_ADC\Config_ADC_user.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_IICA0\Config_IICA0.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_INTC\Config_INTC.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_PORT\Config_PORT.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_PORT\Config_PORT_user.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_TAU0_0\Config_TAU0_0.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_TAU0_1\Config_TAU0_1.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_TAU0_2\Config_TAU0_2.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_TAU1_2\Config_TAU1_2.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_TAU1_2\Config_TAU1_2_user.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_UART0\Config_UART0.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_UART1\Config_UART1.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_UART2\Config_UART2.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_UART3\Config_UART3.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_WDT\Config_WDT.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/Config_WDT\Config_WDT_user.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/general\r_cg_ad_common.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/general\r_cg_iica_common.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/general\r_cg_lvd_common.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/general\r_cg_lvd_common_user.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/general\r_cg_sau_common.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/general\r_cg_systeminit.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/general\r_cg_tau_common.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/r_bsp/board/generic_rl78_g23\hdwinit.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/r_bsp/board/generic_rl78_g23\r_bsp_init.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/r_bsp/mcu/all\r_bsp_common.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/r_bsp/mcu/rl78_g23\mcu_clocks.obj</Path>
+          <Path>HardwareDebug\src/smc_gen/r_pincfg\Pin.obj</Path>
+        </LinkOrder>
+        <NoTargetFile Target=".metadata\.plugins\org.eclipse.cdt.make.core\specs.c"/>
+        <NoTargetFile Target=".metadata\.plugins\org.eclipse.cdt.make.core\specs.cpp"/>
+        <NoTargetFile Target="src\icon_ais.c"/>
+        <NoTargetFile Target="src\smc_gen\Config_IICA0\Config_IICA0_user.c"/>
+        <NoTargetFile Target="src\smc_gen\Config_INTC\Config_INTC_user.c"/>
+        <NoTargetFile Target="src\smc_gen\Config_TAU0_0\Config_TAU0_0_user.c"/>
+        <NoTargetFile Target="src\smc_gen\Config_TAU0_1\Config_TAU0_1_user.c"/>
+        <NoTargetFile Target="src\smc_gen\Config_TAU0_2\Config_TAU0_2_user.c"/>
+        <NoTargetFile Target="src\smc_gen\Config_UART0\Config_UART0_user.c"/>
+        <NoTargetFile Target="src\smc_gen\Config_UART1\Config_UART1_user.c"/>
+        <NoTargetFile Target="src\smc_gen\Config_UART2\Config_UART2_user.c"/>
+        <NoTargetFile Target="src\smc_gen\Config_UART3\Config_UART3_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_ADC\Config_ADC.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_ADC\Config_ADC_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_IICA0\Config_IICA0.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_IICA0\Config_IICA0_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_INTC\Config_INTC.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_INTC\Config_INTC_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_PORT\Config_PORT.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_PORT\Config_PORT_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_0\Config_TAU0_0.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_0\Config_TAU0_0_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_1\Config_TAU0_1.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_1\Config_TAU0_1_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_2\Config_TAU0_2.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU0_2\Config_TAU0_2_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU1_2\Config_TAU1_2.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_TAU1_2\Config_TAU1_2_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_UART0\Config_UART0.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_UART0\Config_UART0_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_UART1\Config_UART1.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_UART1\Config_UART1_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_UART2\Config_UART2.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_UART2\Config_UART2_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_UART3\Config_UART3.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_UART3\Config_UART3_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_WDT\Config_WDT.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\Config_WDT\Config_WDT_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_ad_common.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_iica_common.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_lvd_common.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_lvd_common_user.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_sau_common.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_systeminit.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\general\r_cg_tau_common.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\all\cstart.asm"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c"/>
+        <NoTargetFile Target="trash\2024-02-21-09-31-07\src\smc_gen\r_pincfg\Pin.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_ADC\Config_ADC.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_ADC\Config_ADC_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_IICA0\Config_IICA0.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_IICA0\Config_IICA0_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_INTC\Config_INTC.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_INTC\Config_INTC_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_PORT\Config_PORT.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_PORT\Config_PORT_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_0\Config_TAU0_0.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_0\Config_TAU0_0_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_1\Config_TAU0_1.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_1\Config_TAU0_1_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_2\Config_TAU0_2.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU0_2\Config_TAU0_2_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU1_2\Config_TAU1_2.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_TAU1_2\Config_TAU1_2_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_UART0\Config_UART0.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_UART0\Config_UART0_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_UART1\Config_UART1.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_UART1\Config_UART1_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_UART2\Config_UART2.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_UART2\Config_UART2_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_UART3\Config_UART3.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_UART3\Config_UART3_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_WDT\Config_WDT.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\Config_WDT\Config_WDT_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_ad_common.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_iica_common.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_lvd_common.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_lvd_common_user.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_sau_common.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_systeminit.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\general\r_cg_tau_common.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\all\cstart.asm"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c"/>
+        <NoTargetFile Target="trash\2024-02-22-14-11-03\src\smc_gen\r_pincfg\Pin.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_ADC\Config_ADC.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_ADC\Config_ADC_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_IICA0\Config_IICA0.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_IICA0\Config_IICA0_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_INTC\Config_INTC.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_INTC\Config_INTC_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_PORT\Config_PORT.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_PORT\Config_PORT_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_0\Config_TAU0_0.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_0\Config_TAU0_0_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_1\Config_TAU0_1.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_1\Config_TAU0_1_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_2\Config_TAU0_2.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU0_2\Config_TAU0_2_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU1_2\Config_TAU1_2.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_TAU1_2\Config_TAU1_2_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_UART0\Config_UART0.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_UART0\Config_UART0_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_UART1\Config_UART1.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_UART1\Config_UART1_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_UART2\Config_UART2.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_UART2\Config_UART2_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_UART3\Config_UART3.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_UART3\Config_UART3_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_WDT\Config_WDT.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\Config_WDT\Config_WDT_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_ad_common.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_iica_common.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_lvd_common.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_lvd_common_user.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_sau_common.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_systeminit.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\general\r_cg_tau_common.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\all\cstart.asm"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c"/>
+        <NoTargetFile Target="trash\2024-03-06-11-28-42\src\smc_gen\r_pincfg\Pin.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_ADC\Config_ADC.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_ADC\Config_ADC_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_IICA0\Config_IICA0.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_IICA0\Config_IICA0_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_INTC\Config_INTC.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_INTC\Config_INTC_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_PORT\Config_PORT.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_PORT\Config_PORT_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_0\Config_TAU0_0.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_0\Config_TAU0_0_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_1\Config_TAU0_1.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_1\Config_TAU0_1_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_2\Config_TAU0_2.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU0_2\Config_TAU0_2_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU1_2\Config_TAU1_2.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_TAU1_2\Config_TAU1_2_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_UART0\Config_UART0.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_UART0\Config_UART0_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_UART1\Config_UART1.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_UART1\Config_UART1_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_UART2\Config_UART2.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_UART2\Config_UART2_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_UART3\Config_UART3.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_UART3\Config_UART3_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_WDT\Config_WDT.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\Config_WDT\Config_WDT_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_ad_common.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_iica_common.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_lvd_common.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_lvd_common_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_sau_common.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_systeminit.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\general\r_cg_tau_common.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\all\cstart.asm"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-29-48\src\smc_gen\r_pincfg\Pin.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_ADC\Config_ADC.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_ADC\Config_ADC_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_IICA0\Config_IICA0.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_IICA0\Config_IICA0_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_INTC\Config_INTC.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_INTC\Config_INTC_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_PORT\Config_PORT.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_PORT\Config_PORT_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_0\Config_TAU0_0.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_0\Config_TAU0_0_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_1\Config_TAU0_1.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_1\Config_TAU0_1_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_2\Config_TAU0_2.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU0_2\Config_TAU0_2_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU1_2\Config_TAU1_2.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_TAU1_2\Config_TAU1_2_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_UART0\Config_UART0.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_UART0\Config_UART0_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_UART1\Config_UART1.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_UART1\Config_UART1_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_UART2\Config_UART2.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_UART2\Config_UART2_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_UART3\Config_UART3.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_UART3\Config_UART3_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_WDT\Config_WDT.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\Config_WDT\Config_WDT_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_ad_common.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_iica_common.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_lvd_common.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_lvd_common_user.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_sau_common.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_systeminit.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\general\r_cg_tau_common.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\all\cstart.asm"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c"/>
+        <NoTargetFile Target="trash\2024-03-26-09-31-23\src\smc_gen\r_pincfg\Pin.c"/>
+        <CommonOptions>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\Wifi\WifiUser\AIS4.0"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\sensor"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\health"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\water"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\io"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\lever"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\timer"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\drain"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\hal"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\Wifi"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\comm"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\Wifi\WifiTx"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\iocare"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\eeprom"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\time_short"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\filter"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\Wifi\WifiEtc"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\error"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\Wifi\WifiUser"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\ice_maker"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\service_check"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\sound"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\Wifi\WifiRx"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\metering"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\eol"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\Wifi\WifiSetting"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\diagnosis"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\fct"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\display"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\power_saving"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\prj\key"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\r_pincfg"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\r_bsp"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\general"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\r_config"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_TAU0_2"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_IICA0"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_UART0"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_TAU1_2"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_TAU0_0"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_PORT"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_TAU0_1"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_ADC"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_WDT"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_UART2"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_INTC"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_UART1"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_UART3"</IncludePathForC>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\r_pincfg"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\r_bsp"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\general"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\r_config"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_TAU0_2"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_IICA0"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_UART0"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_TAU1_2"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_TAU0_0"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_PORT"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_TAU0_1"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_ADC"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_WDT"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_UART2"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_INTC"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_UART1"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_UART3"</IncludePathForAsm>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\r_pincfg"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\r_bsp"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\general"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\r_config"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_TAU0_2"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_IICA0"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_UART0"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_TAU1_2"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_TAU0_0"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_PORT"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_TAU0_1"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_ADC"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_WDT"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_UART2"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_INTC"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_UART1"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_UART3"</IncludePathForSms>
+        </CommonOptions>
+      </BuildMode>
+    </BuildOptions>
+  </Project>
+</MicomToolCommonProjectFile>

@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+globalEnablement=false
+prefRealtimeExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<realtimeExpressions>\r\n    <expression text\="TempList[0]"/>\r\n    <expression text\="TempList[2]"/>\r\n    <expression text\="Cold.ExtraMake"/>\r\n    <expression text\="Cold.ExtraMakeTime"/>\r\n    <expression text\="Cold.StartingMode"/>\r\n    <expression text\="Cold.RestartingCount"/>\r\n    <expression text\="Cold.StartingModeTime"/>\r\n    <expression text\="Cold.Amount"/>\r\n    <expression text\="Cold.AmountTime"/>\r\n    <expression text\="Comp"/>\r\n    <expression text\="TempList[3]"/>\r\n    <expression text\="Flow"/>\r\n</realtimeExpressions>\r\n

@@ -1,0 +1,6 @@
+-MAKEUD="D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\HardwareDebug\\icon_ais_c.ud" 
+-form=hexadecimal 
+-output="icon_ais.hex" 
+-byte_count=FF 
+-nomessage 
+-nologo

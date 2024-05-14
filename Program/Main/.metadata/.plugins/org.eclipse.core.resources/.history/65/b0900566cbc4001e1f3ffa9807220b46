@@ -1,0 +1,24 @@
+-cpu=S3
+-c
+-dev="C:/Users/20017497/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR7F100GPJ.DVF"
+-MAKEUD="D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\HardwareDebug\src\smc_gen\r_bsp\mcu\all"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\r_pincfg"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\r_bsp"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\general"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\r_config"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\Config_TAU0_2"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\Config_IICA0"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\Config_UART0"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\Config_TAU1_2"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\Config_TAU0_0"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\Config_PORT"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\Config_TAU0_1"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\Config_ADC"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\Config_WDT"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\Config_UART2"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\Config_INTC"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\Config_UART1"
+-I "D:\Work\project_svn\2024\ICON_AIS_G23\icon_ais\src\smc_gen\Config_UART3"
+-character_set=utf8
+-g
