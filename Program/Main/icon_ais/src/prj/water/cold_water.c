@@ -132,32 +132,32 @@ static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] =
     {
         /*  Region              cold on, cold off,   comp_t  tC_L, tC_H,   extra time */
         {   REGION_AMBIENT_0,   3.5f,    2.0f,       0.0f,    45,   45,     0   },
-        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    45,   45,     0  },
-        {   REGION_AMBIENT_2,   5.0f,    3.0f,       0.0f,    45,   45,     60  }, 
-        {   REGION_AMBIENT_3,   8.0f,    3.5f,       0.0f,    45,   45,     60  },
-        {   REGION_AMBIENT_4,   9.0f,    4.0f,       0.0f,    45,   45,     90 },
-        {   REGION_AMBIENT_5,   10.0f,   5.0f,       0.0f,    45,   45,     90 },
-        {   REGION_AMBIENT_6,   11.5f,   5.0f,       5.0f,    45,   41,     120 },
-        {   REGION_AMBIENT_7,   13.0f,   5.0f,       5.0f,    47,   41,     150 },
-        {   REGION_AMBIENT_8,   14.5f,   5.0f,       5.0f,    49,   43,     180 },
-        {   REGION_AMBIENT_9,   16.0f,   5.0f,       5.0f,    51,   45,     240 },
-        {   REGION_AMBIENT_10,  17.0f,   5.0f,       5.0f,    51,   45,     300 }
+        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    45,   45,     60  },
+        {   REGION_AMBIENT_2,   5.0f,    3.0f,       0.0f,    45,   45,     90  }, 
+        {   REGION_AMBIENT_3,   8.0f,    3.5f,       0.0f,    45,   45,     120 },
+        {   REGION_AMBIENT_4,   9.0f,    4.0f,       0.0f,    45,   45,     150 },
+        {   REGION_AMBIENT_5,   10.0f,   5.0f,       0.0f,    45,   45,     300 },
+        {   REGION_AMBIENT_6,   11.5f,   5.0f,       5.0f,    45,   41,     390 },
+        {   REGION_AMBIENT_7,   13.0f,   5.0f,       5.0f,    47,   41,     450 },
+        {   REGION_AMBIENT_8,   14.5f,   5.0f,       5.0f,    49,   43,     480 },
+        {   REGION_AMBIENT_9,   16.0f,   5.0f,       5.0f,    51,   45,     540 },
+        {   REGION_AMBIENT_10,  17.0f,   5.0f,       5.0f,    51,   45,     600 }
     },
 
     /* RESTARTING over 3 times */
     {
         /*  Region              cold on, cold off,   comp_t  tC_L, tC_H,   extra time */
         {   REGION_AMBIENT_0,   3.5f,    2.0f,       0.0f,    45,   45,     0   },
-        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    45,   45,     0  },
-        {   REGION_AMBIENT_2,   5.0f,    3.0f,       0.0f,    45,   45,     60  }, 
-        {   REGION_AMBIENT_3,   8.0f,    3.5f,       0.0f,    45,   45,     60  },
-        {   REGION_AMBIENT_4,   9.0f,    4.0f,       0.0f,    45,   45,     90 },
-        {   REGION_AMBIENT_5,   10.0f,   5.0f,       0.0f,    45,   45,     90 },
-        {   REGION_AMBIENT_6,   11.5f,   5.0f,       5.0f,    45,   41,     120 },
-        {   REGION_AMBIENT_7,   13.0f,   5.0f,       5.0f,    47,   41,     150 },
-        {   REGION_AMBIENT_8,   14.5f,   5.0f,       5.0f,    49,   43,     180 },
-        {   REGION_AMBIENT_9,   16.0f,   5.0f,       5.0f,    51,   45,     240 },
-        {   REGION_AMBIENT_10,  17.0f,   5.0f,       5.0f,    51,   45,     300 }
+        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    45,   45,     60  },
+        {   REGION_AMBIENT_2,   5.0f,    3.0f,       0.0f,    45,   45,     90  }, 
+        {   REGION_AMBIENT_3,   8.0f,    3.5f,       0.0f,    45,   45,     120 },
+        {   REGION_AMBIENT_4,   9.0f,    4.0f,       0.0f,    45,   45,     150 },
+        {   REGION_AMBIENT_5,   10.0f,   5.0f,       0.0f,    45,   45,     300 },
+        {   REGION_AMBIENT_6,   11.5f,   5.0f,       5.0f,    45,   41,     390 },
+        {   REGION_AMBIENT_7,   13.0f,   5.0f,       5.0f,    47,   41,     450 },
+        {   REGION_AMBIENT_8,   14.5f,   5.0f,       5.0f,    49,   43,     480 },
+        {   REGION_AMBIENT_9,   16.0f,   5.0f,       5.0f,    51,   45,     540 },
+        {   REGION_AMBIENT_10,  17.0f,   5.0f,       5.0f,    51,   45,     600 }
     }
 };
 #endif
