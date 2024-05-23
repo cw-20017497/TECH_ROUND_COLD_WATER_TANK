@@ -41,7 +41,6 @@ static void EnableTempRoom(void);
 static void DisableTempRoom(void);
 #endif
 
-#if 1
 static TAdcConfig_T adcConfList[] = 
 { 
     /* ADC CHANNEL,              CH SUM COUNTER, R_BIT, MAX ,    MIN      On/Off  On Delay        pfEnable            pfDislabe */
@@ -70,30 +69,7 @@ static TAdcConfig_T adcConfList[] =
     { ANI_HEATER_FB,            18,   10, 12U,  1024U,      0U,     ON,     0U,             NULL,               NULL},
     { ANI_UV_ICE_TRAY,          19,   10, 52U,  1024U,      0U,     ON,     0U,             NULL,               NULL},
     { ANI_PUMP_DRAIN_FB,        20,   10, 52U,  1024U,      0U,     ON,     0U,             NULL,               NULL}
-
-    //{ ANI_SENSOR_LEAK,           8,  12, 52U,  4096U,      0U,     ON,     0U,             NULL,               NULL},
-    //{ ANI_SENSOR_INFRARED,       9,  12, 52U,  4096U,      0U,     ON,     0U,             NULL,               NULL},
-    //{ ANI_DC_FAN,               10,  12, 52U,  4096U,      0U,     ON,     0U,             NULL,               NULL},
-    //                                         
-    //{ ANI_TEMP_HOT_IN,          11,  12, 6U,   4096U,      0U,     ON,     0U,             NULL,               NULL},
-    //{ ANI_24V_FB,               12,  12, 52U,  4096U,      0U,     ON,     0U,             NULL,               NULL},
-    //{ ANI_12V_FB,               13,  12, 52U,  4096U,      0U,     ON,     0U,             NULL,               NULL},
-    //                                         
-    //{ ANI_UV_ICE_TANK,          14,  12, 52U,  4096U,      0U,     ON,     0U,             NULL,               NULL},
-    //{ ANI_HEATER_FB,            18,  12, 12U,  4096U,      0U,     ON,     0U,             NULL,               NULL},
-    //{ ANI_UV_ICE_TRAY,          19,  12, 52U,  4096U,      0U,     ON,     0U,             NULL,               NULL},
-    //{ ANI_PUMP_DRAIN_FB,        20,  12, 52U,  4096U,      0U,     ON,     0U,             NULL,               NULL}
 }; 
-#endif
-
-#if 0
-static TAdcConfig_T adcConfList[] = 
-{ 
-    /* ADC CHANNEL,            CH  R_BIT, CNT,  MAX ,    MIN      On/Off  On Delay        pfEnable            pfDislabe */
-    { ANI_TEMP_HOT_IN,          11,  12,  6U,   4096U,    0U,     ON,     0U,             NULL,               NULL},
-}; 
-#endif
-
 #define SZ_ADC_CONF_LIST    (sizeof(adcConfList)/sizeof(TAdcConfig_T))
 
 static void EnableTempCold(void)
