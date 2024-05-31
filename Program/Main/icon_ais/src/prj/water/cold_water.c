@@ -33,7 +33,7 @@ static const TEMP_T OnTempPowerSaving    = 10.0f;
 #define MODE_SUSTAIN            2
 #define MODE_NUM                3
 
-#define TEMP_INIT_STARTING      20.0f   // Cold water temp, for init starting....
+#define TEMP_INIT_STARTING      23.0f   // Cold water temp, for init starting....
 #define ON_DELAY_TIME           10      // 10sec @1sec
 
 /* RESTARTING COUNT LIMIT - NO EXTRA MAKE TIME */
@@ -135,13 +135,13 @@ static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] =
         {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    45,   45,    60 },
         {   REGION_AMBIENT_2,   5.0f,    3.0f,       0.0f,    45,   45,    90 }, 
         {   REGION_AMBIENT_3,   8.0f,    3.5f,       0.0f,    45,   45,    120},
-        {   REGION_AMBIENT_4,   10.0f,   4.0f,       0.0f,    45,   45,    150},
-        {   REGION_AMBIENT_5,   11.0f,   5.0f,       0.0f,    45,   45,    180},
-        {   REGION_AMBIENT_6,   13.0f,   5.0f,       5.0f,    45,   41,    210},
-        {   REGION_AMBIENT_7,   15.0f,   5.0f,       5.0f,    47,   41,    240},
-        {   REGION_AMBIENT_8,   16.5f,   5.0f,       5.0f,    49,   43,    270},
-        {   REGION_AMBIENT_9,   17.5f,   5.0f,       5.0f,    51,   45,    300},
-        {   REGION_AMBIENT_10,  18.0f,   5.0f,       5.0f,    51,   45,    330}
+        {   REGION_AMBIENT_4,   11.0f,   4.0f,       0.0f,    45,   45,    150},
+        {   REGION_AMBIENT_5,   12.0f,   5.0f,       0.0f,    45,   45,    180},
+        {   REGION_AMBIENT_6,   14.0f,   5.0f,       5.0f,    45,   41,    210},
+        {   REGION_AMBIENT_7,   16.0f,   5.0f,       5.0f,    47,   41,    240},
+        {   REGION_AMBIENT_8,   18.0f,   5.0f,       5.0f,    49,   43,    270},
+        {   REGION_AMBIENT_9,   19.0f,   5.0f,       5.0f,    51,   45,    300},
+        {   REGION_AMBIENT_10,  20.0f,   5.0f,       5.0f,    51,   45,    330}
     },
 
     /* RESTARTING over 3 times */
@@ -151,13 +151,13 @@ static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] =
         {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    45,   45,    60 },
         {   REGION_AMBIENT_2,   5.0f,    3.0f,       0.0f,    45,   45,    90 }, 
         {   REGION_AMBIENT_3,   8.0f,    3.5f,       0.0f,    45,   45,    120},
-        {   REGION_AMBIENT_4,   10.0f,   4.0f,       0.0f,    45,   45,    150},
-        {   REGION_AMBIENT_5,   11.0f,   5.0f,       0.0f,    45,   45,    180},
-        {   REGION_AMBIENT_6,   13.0f,   5.0f,       5.0f,    45,   41,    210},
-        {   REGION_AMBIENT_7,   15.0f,   5.0f,       5.0f,    47,   41,    240},
-        {   REGION_AMBIENT_8,   16.5f,   5.0f,       5.0f,    49,   43,    270},
-        {   REGION_AMBIENT_9,   17.5f,   5.0f,       5.0f,    51,   45,    300},
-        {   REGION_AMBIENT_10,  18.0f,   5.0f,       5.0f,    51,   45,    330}
+        {   REGION_AMBIENT_4,   11.0f,   4.0f,       0.0f,    45,   45,    150},
+        {   REGION_AMBIENT_5,   12.0f,   5.0f,       0.0f,    45,   45,    180},
+        {   REGION_AMBIENT_6,   14.0f,   5.0f,       5.0f,    45,   41,    210},
+        {   REGION_AMBIENT_7,   16.0f,   5.0f,       5.0f,    47,   41,    240},
+        {   REGION_AMBIENT_8,   18.0f,   5.0f,       5.0f,    49,   43,    270},
+        {   REGION_AMBIENT_9,   19.0f,   5.0f,       5.0f,    51,   45,    300},
+        {   REGION_AMBIENT_10,  20.0f,   5.0f,       5.0f,    51,   45,    330}
     }
 };
 #endif
@@ -553,14 +553,14 @@ static U8 IsProtectRestartingByFreezing(void)
         case REGION_AMBIENT_1: mTargetTemp = 0.6f; break;
         case REGION_AMBIENT_2: mTargetTemp = 0.7f; break;
         case REGION_AMBIENT_3: mTargetTemp = 0.9f; break;
-        case REGION_AMBIENT_4: mTargetTemp = 1.1f; break;
-        case REGION_AMBIENT_5: mTargetTemp = 1.3f; break;
-        case REGION_AMBIENT_6: mTargetTemp = 1.4f; break;
-        case REGION_AMBIENT_7: mTargetTemp = 1.5f; break;
-        case REGION_AMBIENT_8: mTargetTemp = 1.6f; break;
-        case REGION_AMBIENT_9: mTargetTemp = 1.8f; break;
-        case REGION_AMBIENT_10: mTargetTemp = 1.8f; break;
-        default: mTargetTemp = 1.8f; break;
+        case REGION_AMBIENT_4: mTargetTemp = 1.2f; break;
+        case REGION_AMBIENT_5: mTargetTemp = 1.5f; break;
+        case REGION_AMBIENT_6: mTargetTemp = 1.6f; break;
+        case REGION_AMBIENT_7: mTargetTemp = 1.7f; break;
+        case REGION_AMBIENT_8: mTargetTemp = 1.8f; break;
+        case REGION_AMBIENT_9: mTargetTemp = 2.0f; break;
+        case REGION_AMBIENT_10: mTargetTemp = 2.1f; break;
+        default: mTargetTemp = 2.1f; break;
     }
 
     if( mTargetTemp <= mCurrentTemp )
