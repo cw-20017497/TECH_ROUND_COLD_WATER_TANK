@@ -125,8 +125,8 @@ static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] =
         {   REGION_AMBIENT_6,   8.0f,    5.0f,       0.0f,    47,   47,   47,   540},
         {   REGION_AMBIENT_7,   9.5f,    5.0f,       0.0f,    47,   47,   47,   630},
         {   REGION_AMBIENT_8,   11.0f,   5.0f,       0.0f,    47,   47,   47,   750},
-        {   REGION_AMBIENT_9,   13.0f,   5.5f,       5.5f,    47,   47,   57,   840},
-        {   REGION_AMBIENT_10,  14.0f,   5.5f,       5.5f,    47,   47,   57,   960}
+        {   REGION_AMBIENT_9,   13.0f,   5.5f,       5.5f,    45,   45,   53,   840},
+        {   REGION_AMBIENT_10,  14.0f,   5.5f,       5.5f,    45,   45,   53,   960}
     },
 
     /* COLD WATER < TEMP_INIT_STARTING */
@@ -590,8 +590,8 @@ static U16 ProtectFreezingExtraTime( U16 mExtraMakeTime )
         case REGION_AMBIENT_7: mProtectMakeTime = 150; break;
         case REGION_AMBIENT_8: mProtectMakeTime = 180; break;
         case REGION_AMBIENT_9: mProtectMakeTime = 330; break;
-        case REGION_AMBIENT_10: mProtectMakeTime = 420; break;
-        default: mProtectMakeTime = 420; break;
+        case REGION_AMBIENT_10: mProtectMakeTime = 360; break;
+        default: mProtectMakeTime = 360; break;
     }
 
     mCurrentTemp = GetTemp( TEMP_ID_EVA_1 );   // actually cold water-2 
@@ -764,7 +764,7 @@ static RPS_T CheckCompRps(void)
     // Set Target RPS - COLD 2 TEMPERTURE PROTECT...
     if( Cold.StartingMode == MODE_INIT_STARTING )
     {
-        if( GetTemp( TEMP_ID_EVA_1 ) <= 0.0f )
+        if( GetTemp( TEMP_ID_EVA_1 ) < 2.0f )
         {
             mTargetRps = pColdMake->RpsProtect;
         }
