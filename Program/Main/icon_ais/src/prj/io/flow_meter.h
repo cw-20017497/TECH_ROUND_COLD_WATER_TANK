@@ -16,6 +16,7 @@
 #define AMOUNT_130      455UL
 #define AMOUNT_190      665UL
 #define AMOUNT_210      735UL
+#define AMOUNT_240      840UL
 #define AMOUNT_250      875UL
 #define AMOUNT_500      1750UL
 #define AMOUNT_750      2625UL
