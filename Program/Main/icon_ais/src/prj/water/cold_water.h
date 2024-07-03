@@ -37,7 +37,6 @@ typedef struct _cold_water_
     U8      RegionCold;
     RPS_T   TargetRps;
 
-    U8 RestartingCount; // 추가 냉각 횟수 제한 
     U8 IsExtraMake;     // 추가 냉각 제한 ( FASLE : STOP, TRUE : RUN )
 
     U8 ExtraMake;       // 추가 냉각 여부
@@ -99,10 +98,6 @@ U8 IsSetColdWaterMakeMode(U8 mu8Mode );
 U8 GetColdWaterMakeMode(void );
 
 RPS_T   GetColdWaterMakeCompRps(void);
-
-// 재기동 횟수 카운팅 - SUSTAIN MODE 동작 조건 확인 목적
-void InitColdWaterRestartingCount(void);
-void CountColdWaterRestartingCount(void);
 
 // 냉수 탱크 수위 제어
 void StartFeedColdWater(void);

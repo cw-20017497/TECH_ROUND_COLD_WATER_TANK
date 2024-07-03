@@ -94,7 +94,6 @@ static void ProcessMakeColdWater(void)
         TurnOffComp(COMP_TYPE_COLD);
         TurnOffFan(FAN_TYPE_COLD);
 
-        CountColdWaterRestartingCount();
         ClearColdWaterMakeMode( COLD_MODE_COOLING );
         ClearColdWaterMakeMode( COLD_MODE_DONE );
     }

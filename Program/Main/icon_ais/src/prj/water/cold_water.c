@@ -30,8 +30,7 @@ static const TEMP_T OnTempPowerSaving    = 10.0f;
 // Starting Mode
 #define MODE_INIT_STARTING      0
 #define MODE_RESTARTING         1
-#define MODE_SUSTAIN            2
-#define MODE_NUM                3
+#define MODE_NUM                2
 
 #define TEMP_INIT_STARTING      23.0f   // Cold water temp, for init starting....
 #define ON_DELAY_TIME           10      // 10sec @1sec
@@ -91,77 +90,41 @@ typedef struct _cold_water_make_table_
 } ColdMakeTable_T;
 
 
-#if 0
-static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] = 
-{
-    /* COLD WATER >= TEMP_INIT_STARTING */
-    {
-        {   REGION_AMBIENT_A, TEMP_ON,   TEMP_OFF_6D0,   0.0f,   45,   45,    EXTRA_MAKE_TIME_0MIN  },
-        {   REGION_AMBIENT_B, TEMP_ON,   TEMP_OFF_5D8,   0.0f,   45,   45,    EXTRA_MAKE_TIME_0MIN  },
-        {   REGION_AMBIENT_C, TEMP_ON,   TEMP_OFF_5D8,   8.0f,   60,   45,    EXTRA_MAKE_TIME_0MIN  },
-        {   REGION_AMBIENT_D, TEMP_ON,   TEMP_OFF_5D8,   10.0f,  60,   45,    EXTRA_MAKE_TIME_5MIN  }
-    },
-
-    /* COLD WATER < TEMP_INIT_STARTING */
-    {
-        {   REGION_AMBIENT_A, TEMP_ON,   TEMP_OFF_6D0,   0.0f,   40, 40,    EXTRA_MAKE_TIME_0MIN  },
-        {   REGION_AMBIENT_B, TEMP_ON,   TEMP_OFF_5D8,   6.5f,   40, 45,    EXTRA_MAKE_TIME_0MIN  },
-        {   REGION_AMBIENT_C, TEMP_ON,   TEMP_OFF_5D8,   10.0f,  60, 45,    EXTRA_MAKE_TIME_0MIN  },
-        {   REGION_AMBIENT_D, TEMP_ON,   TEMP_OFF_5D8,   10.0f,  60, 45,    EXTRA_MAKE_TIME_5MIN  }
-    }
-};
-#else
 static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] = 
 {
     /* COLD WATER >= TEMP_INIT_STARTING */
     {                       
-        /*  Region              cold on, cold off,   comp_t   tC_L, tC_H,   extra time */
-        {   REGION_AMBIENT_0,   3.5f,    2.0f,       0.0f,    45,   45,   45,   90 },
-        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    47,   47,   47,   150},
-        {   REGION_AMBIENT_2,   4.5f,    3.0f,       0.0f,    47,   47,   47,   210}, 
-        {   REGION_AMBIENT_3,   5.0f,    3.5f,       0.0f,    47,   47,   47,   240},
-        {   REGION_AMBIENT_4,   6.0f,    4.0f,       0.0f,    47,   47,   47,   330},
-        {   REGION_AMBIENT_5,   7.0f,    5.0f,       0.0f,    47,   47,   47,   480},
-        {   REGION_AMBIENT_6,   8.0f,    5.0f,       0.0f,    47,   47,   47,   540},
-        {   REGION_AMBIENT_7,   9.5f,    5.0f,       0.0f,    47,   47,   47,   630},
-        {   REGION_AMBIENT_8,   11.0f,   5.0f,       0.0f,    47,   47,   47,   750},
-        {   REGION_AMBIENT_9,   13.0f,   5.5f,       5.5f,    45,   45,   53,   840},
-        {   REGION_AMBIENT_10,  14.0f,   5.5f,       5.5f,    45,   45,   53,   960}
+        /*  Region              cold on, cold off,   comp_t   tC_L, tC_H, prt_rps      extra time */
+        {   REGION_AMBIENT_0,   3.5f,    2.0f,       0.0f,    45,   45,   45,          90 },
+        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    47,   47,   47,          150},
+        {   REGION_AMBIENT_2,   4.5f,    3.0f,       0.0f,    47,   47,   47,          210}, 
+        {   REGION_AMBIENT_3,   5.0f,    3.5f,       0.0f,    47,   47,   47,          240},
+        {   REGION_AMBIENT_4,   6.0f,    4.0f,       0.0f,    47,   47,   47,          330},
+        {   REGION_AMBIENT_5,   7.0f,    5.0f,       0.0f,    47,   47,   47,          480},
+        {   REGION_AMBIENT_6,   8.0f,    5.0f,       0.0f,    47,   47,   47,          540},
+        {   REGION_AMBIENT_7,   9.5f,    5.0f,       0.0f,    47,   47,   47,          630},
+        {   REGION_AMBIENT_8,   11.0f,   5.0f,       0.0f,    47,   47,   47,          750},
+        {   REGION_AMBIENT_9,   13.0f,   5.5f,       5.5f,    45,   53,   40,          840},
+        {   REGION_AMBIENT_10,  14.0f,   5.5f,       5.5f,    45,   53,   40,          960}
     },
 
     /* COLD WATER < TEMP_INIT_STARTING */
     {
-        /*  Region              cold on, cold off,   comp_t  tC_L, tC_H,   extra time */
-        {   REGION_AMBIENT_0,   3.5f,    2.0f,       0.0f,    45,   45,  45,  0  },
-        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    47,   47,  47,  90 },
-        {   REGION_AMBIENT_2,   5.0f,    3.0f,       0.0f,    47,   47,  47,  120}, 
-        {   REGION_AMBIENT_3,   7.5f,    3.5f,       0.0f,    47,   47,  47,  180},
-        {   REGION_AMBIENT_4,   9.0f,    4.0f,       0.0f,    47,   47,  47,  210},
-        {   REGION_AMBIENT_5,   10.0f,   5.0f,       0.0f,    47,   47,  47,  240},
-        {   REGION_AMBIENT_6,   12.0f,   5.0f,       0.0f,    47,   47,  47,  270},
-        {   REGION_AMBIENT_7,   13.5f,   5.0f,       0.0f,    47,   47,  47,  300},
-        {   REGION_AMBIENT_8,   14.5f,   5.0f,       0.0f,    47,   47,  47,  330},
-        {   REGION_AMBIENT_9,   16.0f,   5.5f,       5.5f,    57,   57,  57,  360},
-        {   REGION_AMBIENT_10,  17.0f,   5.5f,       5.5f,    57,   57,  57,  390}
-    },
-
-    /* RESTARTING over 3 times */
-    {
-        /*  Region              cold on, cold off,   comp_t  tC_L, tC_H,      extra time */
-        {   REGION_AMBIENT_0,   3.5f,    2.0f,       0.0f,    45,   45,  45,  0  },
-        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    47,   47,  47,  90 },
-        {   REGION_AMBIENT_2,   5.0f,    3.0f,       0.0f,    47,   47,  47,  120}, 
-        {   REGION_AMBIENT_3,   7.5f,    3.5f,       0.0f,    47,   47,  47,  180},
-        {   REGION_AMBIENT_4,   9.0f,    4.0f,       0.0f,    47,   47,  47,  210},
-        {   REGION_AMBIENT_5,   10.0f,   5.0f,       0.0f,    47,   47,  47,  240},
-        {   REGION_AMBIENT_6,   12.0f,   5.0f,       0.0f,    47,   47,  47,  270},
-        {   REGION_AMBIENT_7,   13.5f,   5.0f,       0.0f,    47,   47,  47,  300},
-        {   REGION_AMBIENT_8,   14.5f,   5.0f,       0.0f,    47,   47,  47,  330},
-        {   REGION_AMBIENT_9,   16.0f,   5.5f,       5.5f,    57,   57,  57,  360},
-        {   REGION_AMBIENT_10,  17.0f,   5.5f,       5.5f,    57,   57,  57,  390}
+        /*  Region              cold on, cold off,   comp_t  tC_L, tC_H, prt_rps    extra time */
+        {   REGION_AMBIENT_0,   3.5f,    2.0f,       0.0f,    45,   45,  0,         0  },
+        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    47,   47,  0,         90 },
+        {   REGION_AMBIENT_2,   5.0f,    3.0f,       0.0f,    47,   47,  0,         120}, 
+        {   REGION_AMBIENT_3,   7.5f,    3.5f,       0.0f,    47,   47,  0,         180},
+        {   REGION_AMBIENT_4,   9.0f,    4.0f,       0.0f,    47,   47,  0,         210},
+        {   REGION_AMBIENT_5,   10.0f,   5.0f,       0.0f,    47,   47,  0,         240},
+        {   REGION_AMBIENT_6,   12.0f,   5.0f,       0.0f,    47,   47,  0,         270},
+        {   REGION_AMBIENT_7,   13.5f,   5.0f,       0.0f,    47,   47,  0,         300},
+        {   REGION_AMBIENT_8,   14.5f,   5.0f,       0.0f,    47,   47,  0,         330},
+        {   REGION_AMBIENT_9,   16.0f,   5.5f,       5.5f,    45,   53,  0,         360},
+        {   REGION_AMBIENT_10,  17.0f,   5.5f,       5.5f,    45,   53,  0,         390}
     }
 };
-#endif
+
 
 const ColdMakeTable_T *pColdMake = NULL;
 ColdWater_T Cold;
@@ -327,25 +290,6 @@ RPS_T   GetColdWaterMakeCompRps(void)
     return Cold.TargetRps;
 }
 
-void InitColdWaterRestartingCount(void)
-{
-    Cold.RestartingCount = RESTARTING_COUNT;
-}
-
-void CountColdWaterRestartingCount(void)
-{
-    if( Cold.StartingMode == MODE_INIT_STARTING )
-    {
-        Cold.RestartingCount = RESTARTING_COUNT;
-    }
-    else
-    {
-        if( Cold.RestartingCount != 0 )
-        {
-            Cold.RestartingCount--;
-        }
-    }
-}
 
 /*
  * 냉수 탱크 수위 제어
@@ -647,14 +591,7 @@ static U8 CheckStartMake(void)
                 else
                 {
                     // 재기동 모드를 결정
-                    if( Cold.RestartingCount == 0 )
-                    {
-                        Cold.StartingMode = MODE_SUSTAIN;
-                    }
-                    else
-                    {
-                        Cold.StartingMode = MODE_RESTARTING;
-                    }
+                    Cold.StartingMode = MODE_RESTARTING;
 
                     // 냉수 센서 보호 동작 확인 후 재기동 여부 판단
                     if( IsProtectRestartingByFreezing() == TRUE )
@@ -761,10 +698,11 @@ static RPS_T CheckCompRps(void)
         mTargetRps = pColdMake->RpsUpper;
     }
 
+
     // Set Target RPS - COLD 2 TEMPERTURE PROTECT...
     if( Cold.StartingMode == MODE_INIT_STARTING )
     {
-        if( GetTemp( TEMP_ID_EVA_1 ) < 2.0f )
+        if( GetTemp( TEMP_ID_COLD_WATER ) <= 1.0f )
         {
             mTargetRps = pColdMake->RpsProtect;
         }
