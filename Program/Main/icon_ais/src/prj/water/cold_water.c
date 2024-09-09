@@ -104,8 +104,8 @@ static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] =
         {   REGION_AMBIENT_6,   8.0f,    5.0f,       0.0f,    47,   47,   47,          540},
         {   REGION_AMBIENT_7,   9.5f,    5.0f,       0.0f,    47,   47,   47,          630},
         {   REGION_AMBIENT_8,   11.0f,   5.0f,       0.0f,    47,   47,   47,          750},
-        {   REGION_AMBIENT_9,   13.0f,   5.5f,       5.5f,    45,   53,   40,          840},
-        {   REGION_AMBIENT_10,  14.0f,   5.5f,       5.5f,    45,   53,   40,          960}
+        {   REGION_AMBIENT_9,   13.0f,   5.5f,       5.5f,    60,   60,   45,          960},
+        {   REGION_AMBIENT_10,  14.0f,   5.5f,       5.5f,    60,   60,   45,          1050}
     },
 
     /* COLD WATER < TEMP_INIT_STARTING */
@@ -120,8 +120,8 @@ static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] =
         {   REGION_AMBIENT_6,   12.0f,   5.0f,       0.0f,    47,   47,  0,         270},
         {   REGION_AMBIENT_7,   13.5f,   5.0f,       0.0f,    47,   47,  0,         300},
         {   REGION_AMBIENT_8,   14.5f,   5.0f,       0.0f,    47,   47,  0,         330},
-        {   REGION_AMBIENT_9,   16.0f,   5.5f,       5.5f,    45,   53,  0,         360},
-        {   REGION_AMBIENT_10,  17.0f,   5.5f,       5.5f,    45,   53,  0,         390}
+        {   REGION_AMBIENT_9,   16.0f,   5.5f,       5.5f,    60,   45,  0,         360},
+        {   REGION_AMBIENT_10,  17.0f,   5.5f,       5.5f,    60,   45,  0,         390}
     }
 };
 
@@ -702,7 +702,7 @@ static RPS_T CheckCompRps(void)
     // Set Target RPS - COLD 2 TEMPERTURE PROTECT...
     if( Cold.StartingMode == MODE_INIT_STARTING )
     {
-        if( GetTemp( TEMP_ID_COLD_WATER ) <= 1.0f )
+        if( GetTemp( TEMP_ID_COLD_WATER ) >= 5.0f )
         {
             mTargetRps = pColdMake->RpsProtect;
         }

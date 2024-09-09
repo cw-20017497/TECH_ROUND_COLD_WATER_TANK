@@ -454,7 +454,7 @@
                     <item id="lowVoltage1" input="" vlaue="0"/>
                     <item id="lowVoltage2" input="" vlaue="0"/>
                 </option>
-                <option enabled="true" id="conversionTime" selection="noWaitSelectNormal1Time3">
+                <option enabled="true" id="conversionTime" selection="noWaitSelectNormal1Time6">
                     <item id="noWaitSelectNormal1Time1" input="32" vlaue="2112"/>
                     <item id="noWaitSelectNormal1Time2" input="16" vlaue="1056"/>
                     <item id="noWaitSelectNormal1Time3" input="8" vlaue="528"/>
