@@ -52,7 +52,7 @@ static TAdcConfig_T adcConfList[] =
     { ANI_TEMP_ROOM_WATER,       3,    12, 52U,  4096U,      0U,     ON,     TURN_ON_DELAY,  EnableTempRoom,     EnableTempRoom},
     { ANI_TEMP_COLD_WATER,       4,    12, 52U,  4096U,      0U,     ON,     TURN_ON_DELAY,  EnableTempCold,     EnableTempCold},
 #else                                          
-    { ANI_TEMP_ROOM_WATER,       3,    12, 52U,  4096U,      0U,     ON,     TURN_ON_DELAY,  EnableTempRoom,     DisableTempRoom},
+    { ANI_TEMP_ROOM_WATER,       3,    12, 52U,  4096U,      0U,     ON,     TURN_ON_DELAY,  EnableTempRoom,     EnableTempRoom},
     { ANI_TEMP_COLD_WATER,       4,    12, 52U,  4096U,      0U,     ON,     TURN_ON_DELAY,  EnableTempCold,     DisableTempCold},
 #endif                                         
     { ANI_TEMP_EVA_1,            5,    12, 52U,  4096U,      0U,     ON,     0U,             NULL,               NULL},

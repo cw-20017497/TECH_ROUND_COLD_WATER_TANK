@@ -74,6 +74,8 @@ U16 __near _RamColdTempMinus;
 #define A_RAM_COLD_STARTING         0xFCA0
 #define A_RAM_COLD_TEMP_MINUS       0xFCA2
 #define A_RAM_COLD_2_TEMP_MINUS     0xFCA4
+#define A_RAM_COLD_3_TEMP           0xFCA6
+#define A_RAM_COLD_3_TEMP_MINUS     0xFCA8
 static U16 RamColdTemp;
 static U16 RamAmbiTemp;
 static U8  RamColdRegion;
@@ -88,6 +90,8 @@ static U16 RamColdExtraTime;
 static U16 RamColdStarting;
 static U16 RamColdTempMinus;
 static U16 RamCold2TempMinus;
+static U16 RamCold3Temp;
+static U16 RamCold3TempMinus;
 
 extern U8 A_NULL=0;
 
@@ -117,6 +121,8 @@ static const WifiFixRamList_T WifiRamList[] =
     { A_RAM_COLD_STARTING,          (U8*)(&RamColdStarting),        OneByte,        Read_Only },
     { A_RAM_COLD_TEMP_MINUS,        (U8*)(&RamColdTempMinus),       TwoByte,        Read_Only },
     { A_RAM_COLD_2_TEMP_MINUS,      (U8*)(&RamCold2TempMinus),      TwoByte,        Read_Only },
+    { A_RAM_COLD_3_TEMP,            (U8*)(&RamCold3Temp),           TwoByte,        Read_Only },
+    { A_RAM_COLD_3_TEMP_MINUS,      (U8*)(&RamCold3TempMinus),      TwoByte,        Read_Only },
 };
 
 #define SZ_RAM_ADR_LIST ( sizeof(WifiRamList) / sizeof(WifiFixRamList_T) )
@@ -156,6 +162,7 @@ static void UpdateRamData(void)
     RamCold2Temp        = (U16)( GetTemp( TEMP_ID_EVA_1 ) * 100.0f );
     RamColdExtraTime    = Cold.ExtraMakeTime;
     RamColdStarting     = Cold.StartingMode;
+    RamCold3Temp        = (U16)( GetTemp( TEMP_ID_ROOM_WATER ) * 100.0f );
 
     temp = ( GetTemp( TEMP_ID_COLD_WATER ) * 100.0f );
     if( temp < 0.0f )
@@ -177,6 +184,18 @@ static void UpdateRamData(void)
     else
     {
         RamCold2TempMinus    = 0;
+    }
+
+
+    temp = ( GetTemp( TEMP_ID_ROOM_WATER ) * 100.0f );
+    if( temp < 0.0f )
+    {
+        temp = -temp;
+        RamCold3TempMinus    = (U16)temp;
+    }
+    else
+    {
+        RamCold3TempMinus    = 0;
     }
 }
 
