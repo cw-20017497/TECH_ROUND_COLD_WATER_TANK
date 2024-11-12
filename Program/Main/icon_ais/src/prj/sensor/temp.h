@@ -8,12 +8,13 @@
 enum
 {
     TEMP_ID_AMBIENT,          
-    TEMP_ID_ROOM_WATER,    
+    TEMP_ID_PRT_COLD_WATER,
     TEMP_ID_COLD_WATER,    
     TEMP_ID_EVA_1,              
     TEMP_ID_HOT_OUT,       
     TEMP_ID_HOT_IN,        
     TEMP_ID_HEATER,        
+    TEMP_ID_ROOM_WATER,    
     TEMP_ID_MAX           
 };
 

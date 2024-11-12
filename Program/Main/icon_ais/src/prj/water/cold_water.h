@@ -37,10 +37,12 @@ typedef struct _cold_water_
     U8      RegionCold;
     RPS_T   TargetRps;
 
-    U8 IsExtraMake;     // 추가 냉각 제한 ( FASLE : STOP, TRUE : RUN )
-
     U8 ExtraMake;       // 추가 냉각 여부
+    U8 ExtraMakeRetry;  // 추가 냉각 재시도
     U16 ExtraMakeTime;  // 추가 냉각 시간
+
+    U16 PrtExtraMake;       // 보혿 동작 추가 냉각 시간
+    U16 PrtExtraMakeTime;   // 보혿 동작 추가 냉각 시간
 
     U16 AmountTime;     
     U32 Amount;

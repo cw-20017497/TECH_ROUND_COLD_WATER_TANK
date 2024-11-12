@@ -361,7 +361,8 @@ I16 MakePkt_Debug_2( U8 *buf, U16 mu16PktType )
             mInitData.Step,
             mReadyData.Step,
             mIcingData.Step,
-            GetTemp( TEMP_ID_ROOM_WATER ),
+            //GetTemp( TEMP_ID_ROOM_WATER ),
+            GetTemp( TEMP_ID_PRT_COLD_WATER ),
             GetTemp( TEMP_ID_AMBIENT ),
             (mReadyData.TrayFeedAmount/10UL),   
             (mIcingData.IcingTime/10U),  
@@ -420,14 +421,18 @@ I16 MakePkt_Debug_3( U8 *buf, U16 mu16PktType )
 
     /* COLD WATER */
     GetColdWaterData( &mColdData );
-    len += SPRINTF( (char __FAR *)&buf[ len ], (const char __FAR *)"%d:%d:%.1f:%.1f:%.1f:%d:%u@", 
+    len += SPRINTF( (char __FAR *)&buf[ len ], (const char __FAR *)"%d:%d:%.1f:%.1f:%.1f:%d:%u:%d:%u:%d:%d@", 
             mColdData.ConfigMake,
             mColdData.Make,
             mColdData.TempTargetOn,
             mColdData.TempTargetOff,
             mColdData.TempCurrent,
             mColdData.ExtraMake,
-            mColdData.ExtraMakeTime
+            mColdData.ExtraMakeTime,
+            mColdData.PrtExtraMake,
+            mColdData.PrtExtraMakeTime,
+            mColdData.StartingMode,
+            mColdData.RegionAmbi
             );
 
     /* COMP & DC FAN */

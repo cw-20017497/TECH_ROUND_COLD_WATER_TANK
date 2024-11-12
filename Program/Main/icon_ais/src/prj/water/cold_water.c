@@ -21,7 +21,7 @@
 
 
 /* TARGET OFF TEMP - PROTECTION SUB-COOL */
-#define PROTECT_COLD_TEMP   0.0f
+#define PROTECT_COLD_TEMP   2.0f
 
 /* TARGET TEMP - Power Saving */
 static const TEMP_T OnTempPowerSaving    = 10.0f;
@@ -35,12 +35,14 @@ static const TEMP_T OnTempPowerSaving    = 10.0f;
 #define TEMP_INIT_STARTING      23.0f   // Cold water temp, for init starting....
 #define ON_DELAY_TIME           10      // 10sec @1sec
 
-/* RESTARTING COUNT LIMIT - NO EXTRA MAKE TIME */
-#define RESTARTING_COUNT        2
+#define INIT_STARTING_AMOUNT_TIME   180U // 3min
 
 // Target Rps by Cold Temp Region...
 #define REGION_COLD_LOWER       0
 #define REGION_COLD_UPPER       1
+
+
+#define PROTECTION_MIN_EXTRA_TIME     180U // 3min
 
 typedef enum
 {
@@ -58,33 +60,17 @@ typedef enum
     REGION_NUM,       
 } ColdRegion_T;
 
-#define INIT_STARTING_AMOUNT_TIME   180U // 3min
-
-// EXTRA MAKE TIME @1sec
-//#define EXTRA_MAKE_TIME_0MIN    0U         // 0sec
-//#define EXTRA_MAKE_TIME_5MIN    300U       // 5min = 5 x 60sec 
-//#define EXTRA_MAKE_TIME_10MIN   600U       // 10min = 10 x 60sec   
-//#define EXTRA_MAKE_TIME_15MIN   900U       // 15min = 15 x 60sec
-//#define EXTRA_MAKE_TIME_20MIN   1200U       // 20min = 20 x 60sec
-
-
-// EXTRA MAKE COLD TEMP
-//#define TEMP_ON                 7.5f
-//#define TEMP_OFF_5D8            5.8f
-//#define TEMP_OFF_6D0            6.0f
-
 
 typedef struct _cold_water_make_table_
 {
     ColdRegion_T RegionAmbi;
 
-    TEMP_T  TempOn;
+    TEMP_T  TempOn;           // 
     TEMP_T  TempOff;
 
-    TEMP_T  TempCompRps;      // cold temp 
-    RPS_T   RpsLower;         // cold temp lower region comp rps
-    RPS_T   RpsUpper;         // cold temp upper region comp rps
-    RPS_T   RpsProtect;         // cold temp upper region comp rps
+    TEMP_T  TempCompRps;      // "Comp Rps" reference temp
+    RPS_T   RpsLower;         // Comp RPS when cold temp < ref temp 
+    RPS_T   RpsUpper;         // Comp RPS when cold temp > ref temp
 
     U16     ExtraMakeTime;      // @1sec
 } ColdMakeTable_T;
@@ -94,34 +80,34 @@ static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] =
 {
     /* COLD WATER >= TEMP_INIT_STARTING */
     {                       
-        /*  Region              cold on, cold off,   comp_t   tC_L, tC_H, prt_rps      extra time */
-        {   REGION_AMBIENT_0,   3.5f,    2.0f,       0.0f,    45,   45,   45,          90 },
-        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    47,   47,   47,          150},
-        {   REGION_AMBIENT_2,   4.5f,    3.0f,       0.0f,    47,   47,   47,          210}, 
-        {   REGION_AMBIENT_3,   5.0f,    3.5f,       0.0f,    47,   47,   47,          240},
-        {   REGION_AMBIENT_4,   6.0f,    4.0f,       0.0f,    47,   47,   47,          330},
-        {   REGION_AMBIENT_5,   7.0f,    5.0f,       0.0f,    47,   47,   47,          480},
-        {   REGION_AMBIENT_6,   8.0f,    5.0f,       0.0f,    47,   47,   47,          540},
-        {   REGION_AMBIENT_7,   9.5f,    5.0f,       0.0f,    47,   47,   47,          630},
-        {   REGION_AMBIENT_8,   11.0f,   5.0f,       0.0f,    47,   47,   47,          750},
-        {   REGION_AMBIENT_9,   13.0f,   5.5f,       5.5f,    60,   60,   45,          960},
-        {   REGION_AMBIENT_10,  14.0f,   5.5f,       5.5f,    60,   60,   45,          1050}
+        /*  Region              cold on, cold off,   comp_t   tC_L, tC_H,   extra time */
+        {   REGION_AMBIENT_0,   3.5f,    2.0f,       0.0f,    45,   45,     90 },
+        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    47,   47,     150},
+        {   REGION_AMBIENT_2,   4.5f,    3.0f,       0.0f,    47,   47,     210}, 
+        {   REGION_AMBIENT_3,   5.0f,    3.5f,       0.0f,    47,   47,     240},
+        {   REGION_AMBIENT_4,   6.0f,    4.0f,       0.0f,    47,   47,     330},
+        {   REGION_AMBIENT_5,   7.0f,    5.0f,       0.0f,    47,   47,     480},
+        {   REGION_AMBIENT_6,   8.0f,    5.0f,       0.0f,    47,   47,     540},
+        {   REGION_AMBIENT_7,   9.5f,    5.0f,       0.0f,    47,   47,     660},
+        {   REGION_AMBIENT_8,   11.0f,   5.0f,       0.0f,    47,   47,     780},
+        {   REGION_AMBIENT_9,   13.0f,   5.5f,       5.0f,    60,   45,     990},
+        {   REGION_AMBIENT_10,  14.0f,   5.5f,       5.0f,    60,   45,     1050}
     },
 
     /* COLD WATER < TEMP_INIT_STARTING */
     {
-        /*  Region              cold on, cold off,   comp_t  tC_L, tC_H, prt_rps    extra time */
-        {   REGION_AMBIENT_0,   3.5f,    2.0f,       0.0f,    45,   45,  0,         0  },
-        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    47,   47,  0,         90 },
-        {   REGION_AMBIENT_2,   5.0f,    3.0f,       0.0f,    47,   47,  0,         120}, 
-        {   REGION_AMBIENT_3,   7.5f,    3.5f,       0.0f,    47,   47,  0,         180},
-        {   REGION_AMBIENT_4,   9.0f,    4.0f,       0.0f,    47,   47,  0,         210},
-        {   REGION_AMBIENT_5,   10.0f,   5.0f,       0.0f,    47,   47,  0,         240},
-        {   REGION_AMBIENT_6,   12.0f,   5.0f,       0.0f,    47,   47,  0,         270},
-        {   REGION_AMBIENT_7,   13.5f,   5.0f,       0.0f,    47,   47,  0,         300},
-        {   REGION_AMBIENT_8,   14.5f,   5.0f,       0.0f,    47,   47,  0,         330},
-        {   REGION_AMBIENT_9,   16.0f,   5.5f,       5.5f,    60,   45,  0,         360},
-        {   REGION_AMBIENT_10,  17.0f,   5.5f,       5.5f,    60,   45,  0,         390}
+        /*  Region              cold on, cold off,   comp_t  tC_L, tC_H,   extra time */
+        {   REGION_AMBIENT_0,   3.5f,    2.0f,       0.0f,    45,   45,    0  },
+        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    47,   47,    90 },
+        {   REGION_AMBIENT_2,   5.0f,    3.0f,       0.0f,    47,   47,    120}, 
+        {   REGION_AMBIENT_3,   7.5f,    3.5f,       0.0f,    47,   47,    180},
+        {   REGION_AMBIENT_4,   9.0f,    4.0f,       0.0f,    47,   47,    210},
+        {   REGION_AMBIENT_5,   10.0f,   5.0f,       0.0f,    47,   47,    240},
+        {   REGION_AMBIENT_6,   11.0f,   5.0f,       0.0f,    47,   47,    270},
+        {   REGION_AMBIENT_7,   12.5f,   5.0f,       0.0f,    47,   47,    330},
+        {   REGION_AMBIENT_8,   13.0f,   5.0f,       0.0f,    47,   47,    360},
+        {   REGION_AMBIENT_9,   14.0f,   5.5f,       5.5f,    60,   45,    390},
+        {   REGION_AMBIENT_10,  14.5f,   5.5f,       5.5f,    60,   45,    420}
     }
 };
 
@@ -131,7 +117,8 @@ ColdWater_T Cold;
 
 
 
-static void UpdateColdMakeData(void);
+static U8 GetRegionByTempAmbi(void);
+static void SetColdMakeTable( U8 StartingMode );
 static TEMP_T GetTargetOnTemp(void);
 static TEMP_T GetTargetOffTemp(void);
 
@@ -144,10 +131,9 @@ void  InitColdWater(void)
     Cold.Mode           = COLD_MODE_INIT;
 
     // Make
-    Cold.StartingMode       = MODE_INIT_STARTING;
     Cold.StartingModeTime   = 0U;
 
-    UpdateColdMakeData();
+    SetColdMakeTable( MODE_RESTARTING );
     Cold.TempTargetOn       = GetTargetOnTemp();
     Cold.TempTargetOff      = GetTargetOffTemp();
     Cold.TempCurrent        = GetTemp( TEMP_ID_COLD_WATER );
@@ -330,7 +316,7 @@ static U8 IsValidMake(void)
     /* Turn Off make, dont want to make */
     if( Cold.ConfigMake == FALSE )
     {
-        return FALSE ;
+        return FALSE;
     }
 
     if( IsDoneFlushStatus() == FALSE )
@@ -354,11 +340,13 @@ static U8 IsValidMake(void)
     }
 #endif
 
+#if 0
     /* 압축기 구속 시간 */
     if( IsExpiredCompProtectTime() == FALSE )
     {
         return FALSE;
     }
+#endif
 
     /* 압축기 보호 시간 초과 */
     if( IsOverCompProtectOnTime() == TRUE )
@@ -400,6 +388,7 @@ static U8 IsValidMake(void)
     return TRUE;  // Yes, valid
 }
 
+
 static TEMP_T   GetTargetOnTemp(void)
 {
     // 절전
@@ -416,6 +405,19 @@ static TEMP_T   GetTargetOffTemp(void)
     return pColdMake->TempOff;
 }
 
+
+static void ClearExtraMake(void)
+{
+    Cold.ExtraMake      = FALSE;
+    Cold.ExtraMakeTime  = 0;
+    Cold.ExtraMakeRetry = FALSE;
+}
+
+static void ClearPrtExtraMake(void)
+{
+    Cold.PrtExtraMake       = FALSE;
+    Cold.PrtExtraMakeTime   = 0;
+}
 
 // 냉각 추가 타이머 decounter
 static void UpdateExtraMakeTime(void)
@@ -436,35 +438,26 @@ static void UpdateExtraMakeTime(void)
     }
 }
 
-#if 0
-// 추가 냉각 여부 확인
-// TRUE 반환이면 추가 냉각
-// FALSE 이면 추가 냉각 없음.
-static U8 IsExtraMake(void)
-{
-    // 외기 온도 센서 에러 추가 냉각 없음
-    if( IsError( ERR_TEMP_AMBIENT ) == TRUE )
-    {
-        return FALSE;   // NO EXTRA MAKE
-    }
-
-    // 외기 온도 기준치 이하 추가 냉각 없음
-    if( pColdMake->ExtraMakeTime == EXTRA_MAKE_TIME_0MIN )
-    {
-        return FALSE; // NO EXTRA MAKE;
-    }
-
-    return TRUE;   // EXTRA MAKE
-}
-#endif
 
 void ResetColdAmount(void)
 {
     Cold.Amount     = AMOUNT_240;
-    Cold.AmountTime = INIT_STARTING_AMOUNT_TIME;
+    Cold.AmountTime = INIT_STARTING_AMOUNT_TIME;    // 3min
 }
 
-static void CheckInitStartingModeByColdAmount(void)
+void UpdateColdAmount(U32 mu32Amount)
+{
+    if( Cold.Amount < mu32Amount )
+    {
+        Cold.Amount = 0;
+    }
+    else
+    {
+        Cold.Amount -= mu32Amount;
+    }
+}
+
+static void CheckColdOutAmount(void)
 {
     if( Cold.Amount < AMOUNT_240 )
     {
@@ -482,146 +475,144 @@ static void CheckInitStartingModeByColdAmount(void)
     }
 }
 
-// 냉수2번 온도에 따른 RESTARTING 재기동 대기 여부
-// TRUE : protect mode 
-// FALSE : normal
-static U8 IsProtectRestartingByFreezing(void)
+static U8 IsInitStartingModeByColdOut(void)
 {
-    TEMP_T  mCurrentTemp;
-    TEMP_T  mTargetTemp;
-
-
-    mCurrentTemp = GetTemp( TEMP_ID_EVA_1 );   // actually cold water-2 
-    switch( Cold.RegionAmbi )
+    if( GetWaterOut() == TRUE 
+            && GetWaterOutSelect() == SEL_WATER_COLD )
     {
-        case REGION_AMBIENT_0: mTargetTemp = 0.6f; break;
-        case REGION_AMBIENT_1: mTargetTemp = 0.8f; break;
-        case REGION_AMBIENT_2: mTargetTemp = 1.0f; break;
-        case REGION_AMBIENT_3: mTargetTemp = 1.2f; break;
-        case REGION_AMBIENT_4: mTargetTemp = 1.4f; break;
-        case REGION_AMBIENT_5: mTargetTemp = 1.6f; break;
-        case REGION_AMBIENT_6: mTargetTemp = 1.8f; break;
-        case REGION_AMBIENT_7: mTargetTemp = 2.0f; break;
-        case REGION_AMBIENT_8: mTargetTemp = 2.3f; break;
-        case REGION_AMBIENT_9: mTargetTemp = 2.5f; break;
-        case REGION_AMBIENT_10: mTargetTemp = 2.6f; break;
-        default: mTargetTemp = 2.6f; break;
+        Cold.StartingModeTime = ON_DELAY_TIME;  
     }
 
-    if( mTargetTemp <= mCurrentTemp )
+    // 모드 결정 시간이 만료되면 냉각 여부 및 
+    if( Cold.StartingModeTime != 0 )
     {
-        return FALSE;   // normal ( comp on )
+        Cold.StartingModeTime--;
     }
-
-    return TRUE; // protect( comp off )
-}
-
-static U16 ProtectFreezingExtraTime( U16 mExtraMakeTime )
-{
-    U16 mProtectMakeTime;
-    TEMP_T  mCurrentTemp;
-
-
-    switch( Cold.RegionAmbi )
+    else
     {
-        case REGION_AMBIENT_0: mProtectMakeTime = 0; break;
-        case REGION_AMBIENT_1: mProtectMakeTime = 0; break;
-        case REGION_AMBIENT_2: mProtectMakeTime = 60; break;
-        case REGION_AMBIENT_3: mProtectMakeTime = 60; break;
-        case REGION_AMBIENT_4: mProtectMakeTime = 90; break;
-        case REGION_AMBIENT_5: mProtectMakeTime = 90; break;
-        case REGION_AMBIENT_6: mProtectMakeTime = 120; break;
-        case REGION_AMBIENT_7: mProtectMakeTime = 150; break;
-        case REGION_AMBIENT_8: mProtectMakeTime = 180; break;
-        case REGION_AMBIENT_9: mProtectMakeTime = 330; break;
-        case REGION_AMBIENT_10: mProtectMakeTime = 360; break;
-        default: mProtectMakeTime = 360; break;
-    }
-
-    mCurrentTemp = GetTemp( TEMP_ID_EVA_1 );   // actually cold water-2 
-    if( mCurrentTemp <= 0.0f )
-    {
-        if( mExtraMakeTime > mProtectMakeTime )
+        // 추출량이 기준치에 도달하면 재기동 모드로 동작
+        if( Cold.Amount == 0 )
         {
-            mExtraMakeTime = mProtectMakeTime;
+            return TRUE;
         }
     }
 
-    return mExtraMakeTime;
+    return FALSE;
 }
 
-// Starting Mode 결정
-// 냉각 여부 결정
+
+
+
+// 외기 온도 기준 결정
+static U8 GetRegionByTempAmbi(void)
+{
+    U8 mu8Region;
+    TEMP_T  mTempAmbi;
+
+    mTempAmbi = GetTemp( TEMP_ID_AMBIENT );
+    if( mTempAmbi <= 4.0f )         { mu8Region = REGION_AMBIENT_0; }
+    else if( mTempAmbi <= 8.0f )    { mu8Region = REGION_AMBIENT_1; }
+    else if( mTempAmbi <= 12.0f )   { mu8Region = REGION_AMBIENT_2; }
+    else if( mTempAmbi <= 16.0f )   { mu8Region = REGION_AMBIENT_3; }
+    else if( mTempAmbi <= 20.0f )   { mu8Region = REGION_AMBIENT_4; }
+    else if( mTempAmbi <= 24.0f )   { mu8Region = REGION_AMBIENT_5; }
+    else if( mTempAmbi <= 28.0f )   { mu8Region = REGION_AMBIENT_6; }
+    else if( mTempAmbi <= 32.0f )   { mu8Region = REGION_AMBIENT_7; }
+    else if( mTempAmbi <= 36.0f )   { mu8Region = REGION_AMBIENT_8; }
+    else if( mTempAmbi <= 40.0f )   { mu8Region = REGION_AMBIENT_9; }
+    else { mu8Region = REGION_AMBIENT_10; }
+
+    return mu8Region;
+}
+
+static void RefreshMakeTable(void)
+{
+    Cold.RegionAmbi     = GetRegionByTempAmbi();
+    pColdMake = &ColdMakeTableList[ Cold.StartingMode ][ Cold.RegionAmbi ];
+
+    // Get Temperture
+    Cold.TempTargetOn  = GetTargetOnTemp();
+    Cold.TempTargetOff = GetTargetOffTemp();
+}
+
+static void SetColdMakeTable( U8 StartingMode )
+{
+    Cold.StartingMode   = StartingMode;
+
+    RefreshMakeTable();
+}
+
+
 static U8 CheckStartMake(void)
 {
     U8 mu8Make = FALSE;
 
-    // 냉수 온도가 기준치 이상  조건에서는 즉시 냉각
-    if( Cold.TempCurrent >= TEMP_INIT_STARTING )
+
+    if( GetTemp( TEMP_ID_COLD_WATER ) >= TEMP_INIT_STARTING 
+            || IsInitStartingModeByColdOut() == TRUE )
     {
-        Cold.StartingMode = MODE_INIT_STARTING;
-        mu8Make = TRUE;
-    }
-    else 
-    {
-        // 냉수 온도 기준 이하 조건에서는 추출 중인 경우에는
-        // 10초 지연 후 냉각 여부 결정.
+        SetColdMakeTable( MODE_INIT_STARTING );
+
         if( Cold.TempCurrent >= Cold.TempTargetOn )
         {
-            // 냉수 추출 중에는 시간 재설정
-            if( GetWaterOut() == TRUE 
-                    && GetWaterOutSelect() == SEL_WATER_COLD )
-            {
-                Cold.StartingModeTime = ON_DELAY_TIME;  
-            }
+            ClearPrtExtraMake();
 
-            // 모드 결정 시간이 만료되면 냉각 여부 및 
-            if( Cold.StartingModeTime != 0 )
-            {
-                Cold.StartingModeTime--;
-            }
-            else
-            {
-                // 추출량이 기준치에 도달하면 재기동 모드로 동작
-                if( Cold.Amount == 0 )
-                {
-                    Cold.StartingMode = MODE_INIT_STARTING;
-                    mu8Make = TRUE;
-                }
-                else
-                {
-                    // 재기동 모드를 결정
-                    Cold.StartingMode = MODE_RESTARTING;
-
-                    // 냉수 센서 보호 동작 확인 후 재기동 여부 판단
-                    if( IsProtectRestartingByFreezing() == TRUE )
-                    {
-                        mu8Make = FALSE;
-                    }
-                    else
-                    {
-                        mu8Make = TRUE;
-                    }
-                }
-
-            }
+            mu8Make = TRUE;
         }
         else
         {
-            Cold.StartingModeTime = ON_DELAY_TIME;
+            mu8Make = FALSE;
+        }
+    }
+    else if( GetTemp( TEMP_ID_PRT_COLD_WATER ) > PROTECT_COLD_TEMP )
+    {
+        SetColdMakeTable( MODE_RESTARTING );
+
+        if( Cold.TempCurrent >= Cold.TempTargetOn )
+        {
+            ClearPrtExtraMake();
+
+            mu8Make = TRUE;
+        }
+        else if( Cold.PrtExtraMake == TRUE 
+                && IsExpiredCompProtectTime() == TRUE )
+        {
+            Cold.ExtraMakeRetry = TRUE; // set flag..
+
+            Cold.ExtraMake      = TRUE;
+            Cold.ExtraMakeTime = Cold.PrtExtraMakeTime;
+
+            ClearPrtExtraMake();
+
+            mu8Make = FALSE;
+        }
+        else
+        {
+            mu8Make = FALSE;
         }
     }
 
     return mu8Make;
 }
 
+
 static U8  CheckStopMake(void)
 {
     U8 mu8Make = TRUE;      // 냉각
 
 
-    if( Cold.TempTargetOff >= Cold.TempCurrent 
-            ||  0.0f >= GetTemp( TEMP_ID_EVA_1 ) )
+    // 1. 운전 중에 
+    // 냉수 온도가 매우 높거나, 
+    // 냉수 추출이 일정 부분 있었으면 
+    // 초기 기동 모드로 전환.
+    if( Cold.TempCurrent >= TEMP_INIT_STARTING 
+            || IsInitStartingModeByColdOut() == TRUE )
+    {
+        SetColdMakeTable( MODE_INIT_STARTING );
+    }
+
+    // 2. 냉각 정지 온도에 도달하면 추가 냉각 운전 시간을 설정하고 종료.
+    if( Cold.TempTargetOff >= Cold.TempCurrent )
     {
         Cold.ExtraMake      = TRUE;
         Cold.ExtraMakeTime  = pColdMake->ExtraMakeTime;
@@ -636,29 +627,70 @@ static U8  CheckStopMake(void)
     return mu8Make;
 }
 
-
-
-// 외기 온도 기준 결정
-static void UpdateColdMakeData(void)
+static U8  CheckExtraMake(void)
 {
-    TEMP_T  mTempAmbi;
+    U8 mu8Make = TRUE;
 
+    // Extra Make Cold 
+    if( Cold.ExtraMakeTime != 0 )
+    {
+        mu8Make = TRUE;
+    }
+    else
+    {
+        ClearExtraMake();
 
-    mTempAmbi = GetTemp( TEMP_ID_AMBIENT );
-    if( mTempAmbi <= 4.0f )         { Cold.RegionAmbi = REGION_AMBIENT_0; }
-    else if( mTempAmbi <= 8.0f )    { Cold.RegionAmbi = REGION_AMBIENT_1; }
-    else if( mTempAmbi <= 12.0f )   { Cold.RegionAmbi = REGION_AMBIENT_2; }
-    else if( mTempAmbi <= 16.0f )   { Cold.RegionAmbi = REGION_AMBIENT_3; }
-    else if( mTempAmbi <= 20.0f )   { Cold.RegionAmbi = REGION_AMBIENT_4; }
-    else if( mTempAmbi <= 24.0f )   { Cold.RegionAmbi = REGION_AMBIENT_5; }
-    else if( mTempAmbi <= 28.0f )   { Cold.RegionAmbi = REGION_AMBIENT_6; }
-    else if( mTempAmbi <= 32.0f )   { Cold.RegionAmbi = REGION_AMBIENT_7; }
-    else if( mTempAmbi <= 36.0f )   { Cold.RegionAmbi = REGION_AMBIENT_8; }
-    else if( mTempAmbi <= 40.0f )   { Cold.RegionAmbi = REGION_AMBIENT_9; }
-    else { Cold.RegionAmbi = REGION_AMBIENT_10; }
+        // 추가 냉각이 종료되고 다시 냉각 재운전 조건이면 동작하도록...
+        mu8Make = CheckStartMake();
+    }
 
-    pColdMake = &ColdMakeTableList[ Cold.StartingMode ][ Cold.RegionAmbi ];
+    return mu8Make;
 }
+
+static U8  CheckProtectionMake(U8 mu8Make)
+{
+    // 보호 운전 조건( 재기동, 보호 온도 2도 이하 )
+    if( Cold.StartingMode == MODE_RESTARTING 
+            && GetTemp( TEMP_ID_PRT_COLD_WATER ) <= PROTECT_COLD_TEMP )
+    {
+        if( Cold.RegionAmbi >= REGION_AMBIENT_8 )
+        {
+            // 환경 온도 32도 이상, 일반 운전 중이면 즉시 중지
+            // 환경 온도 32도 이상, 추가 냉각 중이면 
+            if( Cold.ExtraMake == TRUE )
+            {
+                if( Cold.ExtraMakeRetry == FALSE )
+                {
+                    if( Cold.ExtraMakeTime >= PROTECTION_MIN_EXTRA_TIME)
+                    {
+                        Cold.PrtExtraMake       = TRUE;
+                        Cold.PrtExtraMakeTime   = Cold.ExtraMakeTime;
+                    }
+
+                    ClearExtraMake();
+                    mu8Make = FALSE;    
+                }
+            }
+            else if( mu8Make == TRUE )
+            {
+                ClearExtraMake();
+                ClearPrtExtraMake();
+                mu8Make = FALSE;    
+            }
+        }
+        else
+        {
+            ClearExtraMake();
+            ClearPrtExtraMake();
+            mu8Make = FALSE;    
+        }
+        
+    }
+
+    return mu8Make;
+}
+
+
 
 
 // 냉수 온도에 따라 목표 RPS를 결정
@@ -698,32 +730,10 @@ static RPS_T CheckCompRps(void)
         mTargetRps = pColdMake->RpsUpper;
     }
 
-
-    // Set Target RPS - COLD 2 TEMPERTURE PROTECT...
-    if( Cold.StartingMode == MODE_INIT_STARTING )
-    {
-        if( GetTemp( TEMP_ID_COLD_WATER ) >= 5.0f )
-        {
-            mTargetRps = pColdMake->RpsProtect;
-        }
-    }
-
-
     return mTargetRps;
 }
 
 
-void UpdateColdAmount(U32 mu32Amount)
-{
-    if( Cold.Amount < mu32Amount )
-    {
-        Cold.Amount = 0;
-    }
-    else
-    {
-        Cold.Amount -= mu32Amount;
-    }
-}
 
 
 void  MakeColdWater(void)
@@ -731,53 +741,37 @@ void  MakeColdWater(void)
     U8 mu8Make = FALSE;
 
 
+    Cold.TempCurrent   = GetTemp( TEMP_ID_COLD_WATER );
+    RefreshMakeTable();
+
     UpdateExtraMakeTime();
 
-    UpdateColdMakeData();
-
-    CheckInitStartingModeByColdAmount();
+    CheckColdOutAmount();
 
     // Get Current Make Status
     mu8Make = GetColdWaterMake();
 
-    // Get Temperture
-    Cold.TempTargetOn  = GetTargetOnTemp();
-    Cold.TempTargetOff = GetTargetOffTemp();
-    Cold.TempCurrent   = GetTemp( TEMP_ID_COLD_WATER );
 
-
+    // 추각 냉각 조건이면, 일반 운전은 운전 조건으로 검사.
     if( Cold.ExtraMake == TRUE )
     {
-        // 추가 냉각 중이면, 일반 냉각 동작은 OFF로 변경
-        mu8Make = FALSE;
+        mu8Make = CheckExtraMake();
     }
-
-    if( mu8Make == TRUE )
+    else 
     {
-        mu8Make = CheckStopMake();
-    }
-    else
-    {
-        mu8Make = CheckStartMake();
-    }
-
-    // Extra Make Cold 
-    if( Cold.ExtraMake == TRUE )
-    {
-        if( Cold.StartingMode != MODE_INIT_STARTING )
+        if( mu8Make == TRUE )
         {
-            Cold.ExtraMakeTime = ProtectFreezingExtraTime( Cold.ExtraMakeTime );
-        }
-
-        if( Cold.ExtraMakeTime != 0 )
-        {
-            mu8Make = TRUE;
+            mu8Make = CheckStopMake();
         }
         else
         {
-            Cold.ExtraMake = FALSE;
+            mu8Make = CheckStartMake();
         }
     }
+
+    // Protection
+    mu8Make = CheckProtectionMake( mu8Make );
+
 
     // Comp rps
     if( mu8Make == TRUE )
@@ -785,20 +779,92 @@ void  MakeColdWater(void)
         Cold.TargetRps = CheckCompRps();
     }
 
-    // Protectino Off
-    //if( Cold.TempCurrent <= PROTECT_COLD_TEMP )
-    //{
-    //    mu8Make = FALSE;
-    //    Cold.ExtraMakeTime = 0;
-    //}
+    /* 압축기 구속 시간 */
+    if( IsExpiredCompProtectTime() == FALSE )
+    {
+        mu8Make = FALSE;
+    }
 
     // Config Off
     if( IsValidMake() == FALSE )
     {
         mu8Make = FALSE;
-        Cold.ExtraMakeTime = 0;
+
+        ClearExtraMake();
+        ClearPrtExtraMake();
     }
 
     // Set new make status
     SetColdWaterMake( mu8Make );
 }
+
+
+#if 0
+// 냉수 하부  온도에 따른 RESTARTING 재기동 대기 여부
+// TRUE : protect mode 
+// FALSE : normal
+static U8 IsProtectRestartingByFreezing(void)
+{
+    TEMP_T  mCurrentTemp;
+    TEMP_T  mTargetTemp;
+
+
+    mCurrentTemp = GetTemp( TEMP_ID_ROOM_WATER );   // actually cold water-2 
+    switch( Cold.RegionAmbi )
+    {
+        case REGION_AMBIENT_0: mTargetTemp = 3.5f; break;
+        case REGION_AMBIENT_1: mTargetTemp = 3.8f; break;
+        case REGION_AMBIENT_2: mTargetTemp = 4.0f; break;
+        case REGION_AMBIENT_3: mTargetTemp = 4.5f; break;
+        case REGION_AMBIENT_4: mTargetTemp = 4.8f; break;
+        case REGION_AMBIENT_5: mTargetTemp = 5.0f; break;
+        case REGION_AMBIENT_6: mTargetTemp = 5.3f; break;
+        case REGION_AMBIENT_7: mTargetTemp = 5.5f; break;
+        case REGION_AMBIENT_8: mTargetTemp = 6.0f; break;
+        case REGION_AMBIENT_9: mTargetTemp = 6.3f; break;
+        case REGION_AMBIENT_10: mTargetTemp = 6.5f; break;
+        default: mTargetTemp = 6.5f; break;
+    }
+
+    if( mTargetTemp <= mCurrentTemp )
+    {
+        return FALSE;   // normal ( comp on )
+    }
+
+    return TRUE; // protect( comp off )
+}
+
+static U16 ProtectFreezingExtraTime( U16 mExtraMakeTime )
+{
+    U16 mProtectMakeTime;
+    TEMP_T  mCurrentTemp;
+
+
+    switch( Cold.RegionAmbi )
+    {
+        case REGION_AMBIENT_0: mProtectMakeTime = 0; break;
+        case REGION_AMBIENT_1: mProtectMakeTime = 0; break;
+        case REGION_AMBIENT_2: mProtectMakeTime = 60; break;
+        case REGION_AMBIENT_3: mProtectMakeTime = 60; break;
+        case REGION_AMBIENT_4: mProtectMakeTime = 90; break;
+        case REGION_AMBIENT_5: mProtectMakeTime = 90; break;
+        case REGION_AMBIENT_6: mProtectMakeTime = 120; break;
+        case REGION_AMBIENT_7: mProtectMakeTime = 150; break;
+        case REGION_AMBIENT_8: mProtectMakeTime = 180; break;
+        case REGION_AMBIENT_9: mProtectMakeTime = 330; break;
+        case REGION_AMBIENT_10: mProtectMakeTime = 360; break;
+        default: mProtectMakeTime = 360; break;
+    }
+
+    mCurrentTemp = GetTemp( TEMP_ID_ROOM_WATER );   // actually cold water-2 
+    if( mCurrentTemp <= 0.0f )
+    {
+        if( mExtraMakeTime > mProtectMakeTime )
+        {
+            mExtraMakeTime = mProtectMakeTime;
+        }
+    }
+
+    return mExtraMakeTime;
+}
+#endif
