@@ -30,8 +30,10 @@ typedef struct _cold_water_
     U8      RegionAmbi;         
 
     TEMP_T  TempTargetOn;
+    TEMP_T  TempPrtTargetOn;
     TEMP_T  TempTargetOff;
     TEMP_T  TempCurrent;
+    TEMP_T  TempPrtCurrent;
     U8      TempStatus;
 
     U8      RegionCold;

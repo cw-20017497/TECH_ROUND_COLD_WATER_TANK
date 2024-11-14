@@ -66,6 +66,7 @@ typedef struct _cold_water_make_table_
     ColdRegion_T RegionAmbi;
 
     TEMP_T  TempOn;           // 
+    TEMP_T  TempPrtOn;        // 
     TEMP_T  TempOff;
 
     TEMP_T  TempCompRps;      // "Comp Rps" reference temp
@@ -76,38 +77,39 @@ typedef struct _cold_water_make_table_
 } ColdMakeTable_T;
 
 
+#define T_UNUSED    -10.0f
 static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] = 
 {
     /* COLD WATER >= TEMP_INIT_STARTING */
     {                       
-        /*  Region              cold on, cold off,   comp_t   tC_L, tC_H,   extra time */
-        {   REGION_AMBIENT_0,   3.5f,    2.0f,       0.0f,    45,   45,     90 },
-        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    47,   47,     150},
-        {   REGION_AMBIENT_2,   4.5f,    3.0f,       0.0f,    47,   47,     210}, 
-        {   REGION_AMBIENT_3,   5.0f,    3.5f,       0.0f,    47,   47,     240},
-        {   REGION_AMBIENT_4,   6.0f,    4.0f,       0.0f,    47,   47,     330},
-        {   REGION_AMBIENT_5,   7.0f,    5.0f,       0.0f,    47,   47,     480},
-        {   REGION_AMBIENT_6,   8.0f,    5.0f,       0.0f,    47,   47,     540},
-        {   REGION_AMBIENT_7,   9.5f,    5.0f,       0.0f,    47,   47,     660},
-        {   REGION_AMBIENT_8,   11.0f,   5.0f,       0.0f,    47,   47,     780},
-        {   REGION_AMBIENT_9,   13.0f,   5.5f,       5.0f,    60,   45,     990},
-        {   REGION_AMBIENT_10,  14.0f,   5.5f,       5.0f,    60,   45,     1050}
+        /*  Region              cold on, prt on,   cold off,   comp_t   tC_L, tC_H,   extra time */
+        {   REGION_AMBIENT_0,   3.5f,    T_UNUSED,  2.0f,       0.0f,    45,   45,     90 },
+        {   REGION_AMBIENT_1,   4.0f,    T_UNUSED,  2.5f,       0.0f,    47,   47,     150},
+        {   REGION_AMBIENT_2,   4.5f,    T_UNUSED,  3.0f,       0.0f,    47,   47,     210}, 
+        {   REGION_AMBIENT_3,   5.0f,    T_UNUSED,  3.5f,       0.0f,    47,   47,     240},
+        {   REGION_AMBIENT_4,   6.0f,    T_UNUSED,  4.0f,       0.0f,    47,   47,     330},
+        {   REGION_AMBIENT_5,   7.0f,    T_UNUSED,  5.0f,       0.0f,    47,   47,     480},
+        {   REGION_AMBIENT_6,   7.5f,    T_UNUSED,  5.0f,       0.0f,    47,   47,     540},
+        {   REGION_AMBIENT_7,   8.0f,    T_UNUSED,  5.0f,       0.0f,    47,   47,     660},
+        {   REGION_AMBIENT_8,   10.0f,   T_UNUSED,  5.0f,       0.0f,    47,   47,     780},
+        {   REGION_AMBIENT_9,   12.5f,   T_UNUSED,  5.5f,       5.0f,    60,   45,     990},
+        {   REGION_AMBIENT_10,  14.0f,   T_UNUSED,  5.5f,       5.0f,    60,   45,     1050}
     },
 
     /* COLD WATER < TEMP_INIT_STARTING */
     {
-        /*  Region              cold on, cold off,   comp_t  tC_L, tC_H,   extra time */
-        {   REGION_AMBIENT_0,   3.5f,    2.0f,       0.0f,    45,   45,    0  },
-        {   REGION_AMBIENT_1,   4.0f,    2.5f,       0.0f,    47,   47,    90 },
-        {   REGION_AMBIENT_2,   5.0f,    3.0f,       0.0f,    47,   47,    120}, 
-        {   REGION_AMBIENT_3,   7.5f,    3.5f,       0.0f,    47,   47,    180},
-        {   REGION_AMBIENT_4,   9.0f,    4.0f,       0.0f,    47,   47,    210},
-        {   REGION_AMBIENT_5,   10.0f,   5.0f,       0.0f,    47,   47,    240},
-        {   REGION_AMBIENT_6,   11.0f,   5.0f,       0.0f,    47,   47,    270},
-        {   REGION_AMBIENT_7,   12.5f,   5.0f,       0.0f,    47,   47,    330},
-        {   REGION_AMBIENT_8,   13.0f,   5.0f,       0.0f,    47,   47,    360},
-        {   REGION_AMBIENT_9,   14.0f,   5.5f,       5.5f,    60,   45,    390},
-        {   REGION_AMBIENT_10,  14.5f,   5.5f,       5.5f,    60,   45,    420}
+        /*  Region              cold on, prt on,    cold off,   comp_t  tC_L, tC_H,   extra time */
+        {   REGION_AMBIENT_0,   3.6f,    3.5f,      2.0f,       0.0f,    45,   45,    0  },
+        {   REGION_AMBIENT_1,   4.2f,    3.8f,      2.5f,       0.0f,    47,   47,    90 },
+        {   REGION_AMBIENT_2,   5.0f,    4.0f,      3.0f,       0.0f,    47,   47,    120}, 
+        {   REGION_AMBIENT_3,   5.5f,    4.1f,      3.5f,       0.0f,    47,   47,    180},
+        {   REGION_AMBIENT_4,   6.5f,    4.3f,      4.0f,       0.0f,    47,   47,    210},
+        {   REGION_AMBIENT_5,   7.5f,    4.6f,      5.0f,       0.0f,    47,   47,    240},
+        {   REGION_AMBIENT_6,   8.0f,    4.8f,      5.0f,       0.0f,    47,   47,    270},
+        {   REGION_AMBIENT_7,   8.5f,    5.0f,      5.0f,       0.0f,    47,   47,    330},
+        {   REGION_AMBIENT_8,   10.5f,   5.5f,      5.0f,       0.0f,    47,   47,    360},
+        {   REGION_AMBIENT_9,   13.0f,   6.3f,      5.5f,       5.5f,    60,   45,    390},
+        {   REGION_AMBIENT_10,  14.5f,   6.5f,      5.5f,       5.5f,    60,   45,    420}
     }
 };
 
@@ -120,6 +122,7 @@ ColdWater_T Cold;
 static U8 GetRegionByTempAmbi(void);
 static void SetColdMakeTable( U8 StartingMode );
 static TEMP_T GetTargetOnTemp(void);
+static TEMP_T GetTargetOnPrtTemp(void);
 static TEMP_T GetTargetOffTemp(void);
 
 void  InitColdWater(void)
@@ -135,8 +138,10 @@ void  InitColdWater(void)
 
     SetColdMakeTable( MODE_RESTARTING );
     Cold.TempTargetOn       = GetTargetOnTemp();
+    Cold.TempPrtTargetOn    = GetTargetOnPrtTemp();
     Cold.TempTargetOff      = GetTargetOffTemp();
     Cold.TempCurrent        = GetTemp( TEMP_ID_COLD_WATER );
+    Cold.TempPrtCurrent     = GetTemp( TEMP_ID_PRT_COLD_WATER );
     Cold.TempStatus         = COLD_STATUS_GOOD;
 
     Cold.RegionCold         = REGION_COLD_UPPER;
@@ -405,6 +410,11 @@ static TEMP_T   GetTargetOffTemp(void)
     return pColdMake->TempOff;
 }
 
+static TEMP_T   GetTargetOnPrtTemp(void)
+{
+    return pColdMake->TempPrtOn;
+}
+
 
 static void ClearExtraMake(void)
 {
@@ -531,8 +541,9 @@ static void RefreshMakeTable(void)
     pColdMake = &ColdMakeTableList[ Cold.StartingMode ][ Cold.RegionAmbi ];
 
     // Get Temperture
-    Cold.TempTargetOn  = GetTargetOnTemp();
-    Cold.TempTargetOff = GetTargetOffTemp();
+    Cold.TempTargetOn       = GetTargetOnTemp();
+    Cold.TempPrtTargetOn    = GetTargetOnPrtTemp();
+    Cold.TempTargetOff      = GetTargetOffTemp();
 }
 
 static void SetColdMakeTable( U8 StartingMode )
@@ -541,6 +552,7 @@ static void SetColdMakeTable( U8 StartingMode )
 
     RefreshMakeTable();
 }
+
 
 
 static U8 CheckStartMake(void)
@@ -564,11 +576,12 @@ static U8 CheckStartMake(void)
             mu8Make = FALSE;
         }
     }
-    else if( GetTemp( TEMP_ID_PRT_COLD_WATER ) > PROTECT_COLD_TEMP )
+    else if( Cold.TempPrtCurrent > PROTECT_COLD_TEMP )
     {
         SetColdMakeTable( MODE_RESTARTING );
 
-        if( Cold.TempCurrent >= Cold.TempTargetOn )
+        if( Cold.TempCurrent >= Cold.TempTargetOn 
+                && Cold.TempPrtCurrent >= Cold.TempPrtTargetOn )
         {
             ClearPrtExtraMake();
 
@@ -650,8 +663,8 @@ static U8  CheckExtraMake(void)
 static U8  CheckProtectionMake(U8 mu8Make)
 {
     // 보호 운전 조건( 재기동, 보호 온도 2도 이하 )
-    if( Cold.StartingMode == MODE_RESTARTING 
-            && GetTemp( TEMP_ID_PRT_COLD_WATER ) <= PROTECT_COLD_TEMP )
+    //if( Cold.StartingMode == MODE_RESTARTING && Cold.TempPrtCurrent <= PROTECT_COLD_TEMP )
+    if( Cold.TempPrtCurrent <= PROTECT_COLD_TEMP )
     {
         if( Cold.RegionAmbi >= REGION_AMBIENT_8 )
         {
@@ -741,7 +754,8 @@ void  MakeColdWater(void)
     U8 mu8Make = FALSE;
 
 
-    Cold.TempCurrent   = GetTemp( TEMP_ID_COLD_WATER );
+    Cold.TempCurrent    = GetTemp( TEMP_ID_COLD_WATER );
+    Cold.TempPrtCurrent = GetTemp( TEMP_ID_PRT_COLD_WATER );
     RefreshMakeTable();
 
     UpdateExtraMakeTime();
@@ -798,73 +812,3 @@ void  MakeColdWater(void)
     SetColdWaterMake( mu8Make );
 }
 
-
-#if 0
-// 냉수 하부  온도에 따른 RESTARTING 재기동 대기 여부
-// TRUE : protect mode 
-// FALSE : normal
-static U8 IsProtectRestartingByFreezing(void)
-{
-    TEMP_T  mCurrentTemp;
-    TEMP_T  mTargetTemp;
-
-
-    mCurrentTemp = GetTemp( TEMP_ID_ROOM_WATER );   // actually cold water-2 
-    switch( Cold.RegionAmbi )
-    {
-        case REGION_AMBIENT_0: mTargetTemp = 3.5f; break;
-        case REGION_AMBIENT_1: mTargetTemp = 3.8f; break;
-        case REGION_AMBIENT_2: mTargetTemp = 4.0f; break;
-        case REGION_AMBIENT_3: mTargetTemp = 4.5f; break;
-        case REGION_AMBIENT_4: mTargetTemp = 4.8f; break;
-        case REGION_AMBIENT_5: mTargetTemp = 5.0f; break;
-        case REGION_AMBIENT_6: mTargetTemp = 5.3f; break;
-        case REGION_AMBIENT_7: mTargetTemp = 5.5f; break;
-        case REGION_AMBIENT_8: mTargetTemp = 6.0f; break;
-        case REGION_AMBIENT_9: mTargetTemp = 6.3f; break;
-        case REGION_AMBIENT_10: mTargetTemp = 6.5f; break;
-        default: mTargetTemp = 6.5f; break;
-    }
-
-    if( mTargetTemp <= mCurrentTemp )
-    {
-        return FALSE;   // normal ( comp on )
-    }
-
-    return TRUE; // protect( comp off )
-}
-
-static U16 ProtectFreezingExtraTime( U16 mExtraMakeTime )
-{
-    U16 mProtectMakeTime;
-    TEMP_T  mCurrentTemp;
-
-
-    switch( Cold.RegionAmbi )
-    {
-        case REGION_AMBIENT_0: mProtectMakeTime = 0; break;
-        case REGION_AMBIENT_1: mProtectMakeTime = 0; break;
-        case REGION_AMBIENT_2: mProtectMakeTime = 60; break;
-        case REGION_AMBIENT_3: mProtectMakeTime = 60; break;
-        case REGION_AMBIENT_4: mProtectMakeTime = 90; break;
-        case REGION_AMBIENT_5: mProtectMakeTime = 90; break;
-        case REGION_AMBIENT_6: mProtectMakeTime = 120; break;
-        case REGION_AMBIENT_7: mProtectMakeTime = 150; break;
-        case REGION_AMBIENT_8: mProtectMakeTime = 180; break;
-        case REGION_AMBIENT_9: mProtectMakeTime = 330; break;
-        case REGION_AMBIENT_10: mProtectMakeTime = 360; break;
-        default: mProtectMakeTime = 360; break;
-    }
-
-    mCurrentTemp = GetTemp( TEMP_ID_ROOM_WATER );   // actually cold water-2 
-    if( mCurrentTemp <= 0.0f )
-    {
-        if( mExtraMakeTime > mProtectMakeTime )
-        {
-            mExtraMakeTime = mProtectMakeTime;
-        }
-    }
-
-    return mExtraMakeTime;
-}
-#endif
