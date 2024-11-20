@@ -84,32 +84,32 @@ static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] =
     {                       
         /*  Region              cold on, prt on,   cold off,   comp_t   tC_L, tC_H,   extra time */
         {   REGION_AMBIENT_0,   3.5f,    T_UNUSED,  2.0f,       0.0f,    45,   45,     90 },
-        {   REGION_AMBIENT_1,   4.0f,    T_UNUSED,  2.5f,       0.0f,    47,   47,     150},
-        {   REGION_AMBIENT_2,   4.5f,    T_UNUSED,  3.0f,       0.0f,    47,   47,     210}, 
-        {   REGION_AMBIENT_3,   5.0f,    T_UNUSED,  3.5f,       0.0f,    47,   47,     240},
-        {   REGION_AMBIENT_4,   6.0f,    T_UNUSED,  4.0f,       0.0f,    47,   47,     330},
-        {   REGION_AMBIENT_5,   7.0f,    T_UNUSED,  5.0f,       0.0f,    47,   47,     480},
-        {   REGION_AMBIENT_6,   7.5f,    T_UNUSED,  5.0f,       0.0f,    47,   47,     540},
-        {   REGION_AMBIENT_7,   8.0f,    T_UNUSED,  5.0f,       0.0f,    47,   47,     660},
-        {   REGION_AMBIENT_8,   10.0f,   T_UNUSED,  5.0f,       0.0f,    47,   47,     780},
-        {   REGION_AMBIENT_9,   12.5f,   T_UNUSED,  5.5f,       5.0f,    60,   45,     990},
-        {   REGION_AMBIENT_10,  14.0f,   T_UNUSED,  5.5f,       5.0f,    60,   45,     1050}
+        {   REGION_AMBIENT_1,   4.0f,    T_UNUSED,  2.5f,       0.0f,    51,   51,     150},
+        {   REGION_AMBIENT_2,   4.5f,    T_UNUSED,  3.0f,       0.0f,    51,   51,     210}, 
+        {   REGION_AMBIENT_3,   5.0f,    T_UNUSED,  3.5f,       0.0f,    51,   51,     240},
+        {   REGION_AMBIENT_4,   6.0f,    T_UNUSED,  4.0f,       0.0f,    51,   51,     330},
+        {   REGION_AMBIENT_5,   7.0f,    T_UNUSED,  5.0f,       0.0f,    51,   51,     480},
+        {   REGION_AMBIENT_6,   7.5f,    T_UNUSED,  5.0f,       0.0f,    51,   51,     540},
+        {   REGION_AMBIENT_7,   8.0f,    T_UNUSED,  5.0f,       0.0f,    51,   51,     720},
+        {   REGION_AMBIENT_8,   10.0f,   T_UNUSED,  5.0f,       0.0f,    51,   51,     810},
+        {   REGION_AMBIENT_9,   12.5f,   T_UNUSED,  5.5f,       5.0f,    60,   45,     1050},
+        {   REGION_AMBIENT_10,  14.0f,   T_UNUSED,  5.5f,       5.0f,    60,   45,     1110}
     },
 
     /* COLD WATER < TEMP_INIT_STARTING */
     {
         /*  Region              cold on, prt on,    cold off,   comp_t  tC_L, tC_H,   extra time */
         {   REGION_AMBIENT_0,   3.6f,    3.5f,      2.0f,       0.0f,    45,   45,    0  },
-        {   REGION_AMBIENT_1,   4.2f,    3.8f,      2.5f,       0.0f,    47,   47,    90 },
-        {   REGION_AMBIENT_2,   5.0f,    4.0f,      3.0f,       0.0f,    47,   47,    120}, 
-        {   REGION_AMBIENT_3,   5.5f,    4.1f,      3.5f,       0.0f,    47,   47,    180},
-        {   REGION_AMBIENT_4,   6.5f,    4.3f,      4.0f,       0.0f,    47,   47,    210},
-        {   REGION_AMBIENT_5,   7.5f,    4.6f,      5.0f,       0.0f,    47,   47,    240},
-        {   REGION_AMBIENT_6,   8.0f,    4.8f,      5.0f,       0.0f,    47,   47,    270},
-        {   REGION_AMBIENT_7,   8.5f,    5.0f,      5.0f,       0.0f,    47,   47,    330},
-        {   REGION_AMBIENT_8,   10.5f,   5.5f,      5.0f,       0.0f,    47,   47,    360},
-        {   REGION_AMBIENT_9,   13.0f,   6.3f,      5.5f,       5.5f,    60,   45,    390},
-        {   REGION_AMBIENT_10,  14.5f,   6.5f,      5.5f,       5.5f,    60,   45,    420}
+        {   REGION_AMBIENT_1,   4.2f,    3.8f,      2.5f,       0.0f,    51,   51,    120},
+        {   REGION_AMBIENT_2,   5.0f,    4.0f,      3.0f,       0.0f,    51,   51,    180}, 
+        {   REGION_AMBIENT_3,   5.5f,    4.1f,      3.5f,       0.0f,    51,   51,    270},
+        {   REGION_AMBIENT_4,   6.5f,    4.3f,      4.0f,       0.0f,    51,   51,    330},
+        {   REGION_AMBIENT_5,   7.5f,    4.6f,      5.0f,       0.0f,    51,   51,    360},
+        {   REGION_AMBIENT_6,   9.5f,    4.8f,      5.0f,       0.0f,    51,   51,    390},
+        {   REGION_AMBIENT_7,   10.0f,   5.0f,      5.0f,       0.0f,    51,   51,    450},
+        {   REGION_AMBIENT_8,   11.5f,   5.8f,      5.0f,       0.0f,    51,   51,    480},
+        {   REGION_AMBIENT_9,   13.5f,   6.5f,      5.5f,       5.5f,    60,   45,    510},
+        {   REGION_AMBIENT_10,  14.5f,   6.7f,      5.5f,       5.5f,    60,   45,    540}
     }
 };
 
