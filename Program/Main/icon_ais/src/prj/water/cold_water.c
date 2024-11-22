@@ -104,12 +104,12 @@ static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] =
         {   REGION_AMBIENT_2,   5.0f,    4.0f,      3.0f,       0.0f,    51,   51,    180}, 
         {   REGION_AMBIENT_3,   5.5f,    4.1f,      3.5f,       0.0f,    51,   51,    270},
         {   REGION_AMBIENT_4,   6.5f,    4.3f,      4.0f,       0.0f,    51,   51,    330},
-        {   REGION_AMBIENT_5,   7.5f,    4.6f,      5.0f,       0.0f,    51,   51,    360},
-        {   REGION_AMBIENT_6,   9.5f,    4.8f,      5.0f,       0.0f,    51,   51,    390},
-        {   REGION_AMBIENT_7,   10.0f,   5.0f,      5.0f,       0.0f,    51,   51,    450},
-        {   REGION_AMBIENT_8,   11.5f,   5.8f,      5.0f,       0.0f,    51,   51,    480},
-        {   REGION_AMBIENT_9,   13.5f,   6.5f,      5.5f,       5.5f,    60,   45,    510},
-        {   REGION_AMBIENT_10,  14.5f,   6.7f,      5.5f,       5.5f,    60,   45,    540}
+        {   REGION_AMBIENT_5,   8.0f,    4.8f,      5.0f,       0.0f,    51,   51,    360},
+        {   REGION_AMBIENT_6,   10.0f,   5.0f,      5.0f,       0.0f,    51,   51,    390},
+        {   REGION_AMBIENT_7,   11.0f,   5.5f,      5.0f,       0.0f,    51,   51,    450},
+        {   REGION_AMBIENT_8,   13.0f,   6.3f,      5.0f,       0.0f,    51,   51,    480},
+        {   REGION_AMBIENT_9,   15.5f,   7.0f,      5.5f,       5.5f,    60,   45,    510},
+        {   REGION_AMBIENT_10,  16.0f,   7.1f,      5.5f,       5.5f,    60,   45,    540}
     }
 };
 
