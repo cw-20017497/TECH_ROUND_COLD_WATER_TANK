@@ -32,7 +32,7 @@ TempList_T TempList[] =
     { ANI_TEMP_HOT_OUT,         ConvAdc2Temp_HotOut,                FALSE,  24.0f,     0 },
     { ANI_TEMP_HOT_IN,          ConvAdc2Temp_HotIn,                 FALSE,  24.0f,     0 },
     { ANI_TEMP_HEATER,          ConvAdc2Temp_HotOut,                FALSE,  24.0f,     0 },
-    { ANI_TEMP_ROOM_WATER,      ConvAdc2Temp_IceTrayIn,             FALSE,  24.0f,     0 },
+    { ANI_TEMP_ROOM_WATER,      ConvAdc2Temp_ColdBottom,             FALSE,  24.0f,     0 },
 };
 #define	SZ_LIST		( sizeof( TempList ) / sizeof( TempList_T ))
 

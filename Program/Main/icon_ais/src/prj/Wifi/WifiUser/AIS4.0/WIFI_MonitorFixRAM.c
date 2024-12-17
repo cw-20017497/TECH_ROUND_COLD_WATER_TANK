@@ -162,7 +162,7 @@ static void UpdateRamData(void)
     RamCold2Temp        = (U16)( GetTemp( TEMP_ID_EVA_1 ) * 100.0f );
     RamColdExtraTime    = Cold.ExtraMakeTime;
     RamColdStarting     = Cold.StartingMode;
-    RamCold3Temp        = (U16)( GetTemp( TEMP_ID_ROOM_WATER ) * 100.0f );
+    RamCold3Temp        = (U16)( GetTemp( TEMP_ID_PRT_COLD_WATER ) * 100.0f );
 
     temp = ( GetTemp( TEMP_ID_COLD_WATER ) * 100.0f );
     if( temp < 0.0f )
@@ -187,7 +187,7 @@ static void UpdateRamData(void)
     }
 
 
-    temp = ( GetTemp( TEMP_ID_ROOM_WATER ) * 100.0f );
+    temp = ( GetTemp( TEMP_ID_PRT_COLD_WATER ) * 100.0f );
     if( temp < 0.0f )
     {
         temp = -temp;
