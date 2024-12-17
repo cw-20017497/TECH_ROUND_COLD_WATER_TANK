@@ -6,6 +6,7 @@
 #include "temp_table_cold_lattron.h"
 #include "temp_table_hot_in_out.h"
 #include "temp_table_eva.h"
+#include "temp_table_cold_bottom.h"
 
 
 typedef TEMP_T(*Action_T)(U16 mu16Adc);
@@ -23,7 +24,7 @@ typedef struct _temp_list_
 TempList_T TempList[] = 
 {
     { ANI_TEMP_AMBIENT,         ConvAdc2Temp_Ambient,               FALSE,  24.0f,     0 },
-    { ANI_TEMP_ROOM_WATER,      ConvAdc2Temp_IceTrayIn,             FALSE,  24.0f,     0 },
+    { ANI_TEMP_ROOM_WATER,      ConvAdc2Temp_ColdBottom,            FALSE,  24.0f,     0 },
     { ANI_TEMP_COLD_WATER,      ConvAdc2Temp_ColdWater,             FALSE,  24.0f,     0 },
     //{ ANI_TEMP_EVA_1,           ConvAdc2Temp_Eva,                 FALSE,  24.0f,     0 },
     { ANI_TEMP_EVA_1,           ConvAdc2Temp_Lattron_ColdWater,     FALSE,  24.0f,     0 },

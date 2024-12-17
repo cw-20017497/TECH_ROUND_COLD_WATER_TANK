@@ -8,6 +8,7 @@ C_SRCS += \
 ../src/prj/sensor/temp.c \
 ../src/prj/sensor/temp_table_ambient.c \
 ../src/prj/sensor/temp_table_cold.c \
+../src/prj/sensor/temp_table_cold_bottom.c \
 ../src/prj/sensor/temp_table_cold_lattron.c \
 ../src/prj/sensor/temp_table_common.c \
 ../src/prj/sensor/temp_table_eva.c \
@@ -20,6 +21,7 @@ src/prj/sensor/level.obj \
 src/prj/sensor/temp.obj \
 src/prj/sensor/temp_table_ambient.obj \
 src/prj/sensor/temp_table_cold.obj \
+src/prj/sensor/temp_table_cold_bottom.obj \
 src/prj/sensor/temp_table_cold_lattron.obj \
 src/prj/sensor/temp_table_common.obj \
 src/prj/sensor/temp_table_eva.obj \

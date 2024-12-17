@@ -102,14 +102,14 @@ static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] =
         {   REGION_AMBIENT_0,   3.6f,    3.5f,      2.0f,       0.0f,    45,   45,    0  },
         {   REGION_AMBIENT_1,   4.2f,    3.8f,      2.5f,       0.0f,    51,   51,    120},
         {   REGION_AMBIENT_2,   5.0f,    4.0f,      3.0f,       0.0f,    51,   51,    180}, 
-        {   REGION_AMBIENT_3,   5.5f,    4.1f,      3.5f,       0.0f,    51,   51,    270},
-        {   REGION_AMBIENT_4,   6.5f,    4.3f,      4.0f,       0.0f,    51,   51,    330},
-        {   REGION_AMBIENT_5,   8.0f,    4.8f,      5.0f,       0.0f,    51,   51,    360},
-        {   REGION_AMBIENT_6,   10.0f,   5.0f,      5.0f,       0.0f,    51,   51,    390},
-        {   REGION_AMBIENT_7,   11.0f,   5.5f,      5.0f,       0.0f,    51,   51,    450},
-        {   REGION_AMBIENT_8,   13.0f,   6.3f,      5.0f,       0.0f,    51,   51,    480},
-        {   REGION_AMBIENT_9,   15.5f,   7.0f,      5.5f,       5.5f,    60,   45,    510},
-        {   REGION_AMBIENT_10,  16.0f,   7.1f,      5.5f,       5.5f,    60,   45,    540}
+        {   REGION_AMBIENT_3,   5.5f,    4.2f,      3.5f,       0.0f,    51,   51,    240},
+        {   REGION_AMBIENT_4,   6.2f,    5.0f,      4.0f,       0.0f,    51,   51,    270},
+        {   REGION_AMBIENT_5,   8.5f,    5.3f,      5.0f,       0.0f,    51,   51,    360},
+        {   REGION_AMBIENT_6,   11.0f,   5.5f,      5.0f,       0.0f,    51,   51,    390},
+        {   REGION_AMBIENT_7,   12.5f,   6.0f,      5.0f,       0.0f,    51,   51,    450},
+        {   REGION_AMBIENT_8,   14.0f,   6.5f,      5.0f,       0.0f,    51,   51,    480},
+        {   REGION_AMBIENT_9,   15.5f,   7.0f,      5.5f,       7.0f,    60,   45,    510},
+        {   REGION_AMBIENT_10,  16.0f,   7.2f,      5.5f,       7.2f,    60,   45,    540}
     }
 };
 
