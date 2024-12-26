@@ -21,7 +21,8 @@
 
 
 /* TARGET OFF TEMP - PROTECTION SUB-COOL */
-#define PROTECT_COLD_TEMP   1.3f
+//#define PROTECT_COLD_TEMP   0.5f
+#define PROTECT_COLD_TEMP   -5.0f
 
 /* TARGET TEMP - Power Saving */
 static const TEMP_T OnTempPowerSaving    = 10.0f;
@@ -106,10 +107,10 @@ static const ColdMakeTable_T     ColdMakeTableList[ MODE_NUM ][ REGION_NUM ] =
         {   REGION_AMBIENT_4,   6.2f,    5.0f,      4.0f,       0.0f,    51,   51,    270},
         {   REGION_AMBIENT_5,   8.5f,    5.3f,      5.0f,       0.0f,    51,   51,    360},
         {   REGION_AMBIENT_6,   11.0f,   5.5f,      5.0f,       0.0f,    51,   51,    390},
-        {   REGION_AMBIENT_7,   11.5f,   6.0f,      5.0f,       0.0f,    51,   51,    450},
-        {   REGION_AMBIENT_8,   14.5f,   6.5f,      5.0f,       0.0f,    51,   51,    480},
-        {   REGION_AMBIENT_9,   17.0f,   7.0f,      5.5f,       8.0f,    60,   45,    510},
-        {   REGION_AMBIENT_10,  18.0f,   7.2f,      5.5f,       8.5f,    60,   45,    540}
+        {   REGION_AMBIENT_7,   12.5f,   6.0f,      5.0f,       0.0f,    51,   51,    450},
+        {   REGION_AMBIENT_8,   15.0f,   6.5f,      5.0f,       0.0f,    51,   51,    480},
+        {   REGION_AMBIENT_9,   17.0f,   7.0f,      5.5f,       7.0f,    60,   45,    510},
+        {   REGION_AMBIENT_10,  18.0f,   8.0f,      5.5f,       8.0f,    60,   45,    540}
     }
 };
 
